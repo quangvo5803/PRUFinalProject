@@ -1,19 +1,23 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public Text currentScoreText;
     bool horizontalInput;
     float flyPower = 5f;
     float fallPower = 4.5f;
     bool isFly = false;
     bool isGround = true;
-    private Rigidbody2D rb;
     private Animator animator;
+    int multiScore = 1;
+    double currentScore = 0;
+    private double accumulatedTime = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
@@ -44,5 +48,17 @@ public class Player : MonoBehaviour
         /// Change Animator
         animator.SetBool("IsFlyIng", isFly);
         animator.SetBool("IsGround", isGround);
+        UpdateScore();
+    }
+
+    private void UpdateScore()
+    {
+        accumulatedTime += Time.deltaTime;
+        if (accumulatedTime >= 0.2)
+        {
+            currentScore += multiScore;
+            accumulatedTime = 0;
+        }
+        currentScoreText.text = ((uint)currentScore).ToString("D12");
     }
 }
