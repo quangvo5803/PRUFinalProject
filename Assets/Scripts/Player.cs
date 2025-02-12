@@ -61,4 +61,18 @@ public class Player : MonoBehaviour
         }
         currentScoreText.text = ((uint)currentScore).ToString("D12");
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("OnTriggerEnter2D");
+        if (other.gameObject.tag == "Coin")
+        {
+            other.transform.position = new Vector3(
+                other.transform.position.x,
+                other.transform.position.y + 1f,
+                other.transform.position.z
+            );
+            Destroy(other.gameObject);
+        }
+    }
 }

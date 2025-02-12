@@ -572,7 +572,7 @@ Transform:
   m_GameObject: {fileID: 978235283}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: -8, z: 0}
+  m_LocalPosition: {x: 10, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -695,14 +695,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinMaps:
-  - {fileID: 3811891027678604128, guid: 06b34669a394ba1468966f7c07f30a74, type: 3}
-  - {fileID: 7648945547821909412, guid: ccd9d40d2d6574242a7dd9e377c10834, type: 3}
-  - {fileID: 2471658943185827242, guid: a6b0860657ec6e74e9d0a9c0a84726b2, type: 3}
-  - {fileID: 3042387439975714234, guid: b3607d92882ba254fa637f7d118b4c75, type: 3}
+  - {fileID: 1735957161693661142, guid: 9e068d7d5b14b87409a0f1abba1ac90a, type: 3}
+  - {fileID: 5987397211755451594, guid: a6619aa8bcfab29439b0b74682e95c58, type: 3}
+  - {fileID: 1033070410240616966, guid: cf8d5b0b05f22aa438269b5c3dcabc6a, type: 3}
+  - {fileID: 3420582118735943575, guid: 4526837777cac464bb5900faa68463d5, type: 3}
+  - {fileID: 7755408191095608724, guid: 00421cff77ca7cd44938cdc7cc194b06, type: 3}
+  - {fileID: 1882584512989393407, guid: 572aa9a209acd5141a8a5b7ba109b8d3, type: 3}
+  - {fileID: 9133974452905244511, guid: 62027763acaca8f468c6ea53d33d6c22, type: 3}
   positionSpawn:
   - {fileID: 1724627990}
-  - {fileID: 135480298}
   - {fileID: 978235284}
+  - {fileID: 135480298}
   startTime: 5
 --- !u!4 &1093784867
 Transform:
