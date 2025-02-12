@@ -19,7 +19,7 @@ public class CoinSpawner : MonoBehaviour
         if (timeBetweenSpawn <= 0)
         {
             SpawnCoin();
-            timeBetweenSpawn = Random.Range(5, 10);
+            timeBetweenSpawn = Random.Range(10, 15);
         }
         else
         {
@@ -32,11 +32,16 @@ public class CoinSpawner : MonoBehaviour
         int randomCoin = Random.Range(0, coinMaps.Length);
         if (randomCoin != coinMaps.Length - 1)
         {
-            Instantiate(coinMaps[randomCoin], positionSpawn[0].position, Quaternion.identity);
+            int randomPostion = Random.Range(0, positionSpawn.Length - 1);
+            Instantiate(
+                coinMaps[randomCoin],
+                positionSpawn[randomPostion].position,
+                Quaternion.identity
+            );
         }
         else
         {
-            int randomPostion = Random.Range(0, positionSpawn.Length);
+            int randomPostion = Random.Range(0, positionSpawn.Length - 2);
             Instantiate(
                 coinMaps[randomCoin],
                 positionSpawn[randomPostion].position,
