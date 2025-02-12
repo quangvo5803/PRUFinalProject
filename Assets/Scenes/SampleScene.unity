@@ -695,7 +695,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinMaps:
-  - {fileID: 5039034716375640830, guid: 2ad26dd1563dfa342a3a1179ea39b4ed, type: 3}
   - {fileID: 332482614936246248, guid: 100187a6bc5f80340977fe1d36b9964d, type: 3}
   - {fileID: 8645166066685131506, guid: 4238fa7b377f93e44b5420a6dc6826f5, type: 3}
   - {fileID: 3581265317785244030, guid: c8fcbc3887d830d43892e243859ee90b, type: 3}
