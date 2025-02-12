@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 83da0913b3edad2489fe9215d78961f0
+guid: 7ea5fc75dfc7c2e4aa988f7106554051
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6762400964850869560
-    second: UpDown_0
+      213: -4864007835336685307
+    second: PRU_0
+  - first:
+      213: -7645058441819192275
+    second: PRU_1
+  - first:
+      213: -8203389427996343995
+    second: PRU_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UpDown_0
+      name: PRU_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 20
-        height: 11
+        x: 1
+        y: 2
+        width: 6
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 835e1ba49dfd8dd50800000000000000
-      internalID: 6762400964850869560
+      spriteID: 5094a06f4a29f7cb0800000000000000
+      internalID: -4864007835336685307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PRU_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2404483adb47e590800000000000000
+      internalID: -7645058441819192275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PRU_2
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541451657c4b72e80800000000000000
+      internalID: -8203389427996343995
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UpDown_0: 6762400964850869560
+      PRU_0: -4864007835336685307
+      PRU_1: -7645058441819192275
+      PRU_2: -8203389427996343995
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
