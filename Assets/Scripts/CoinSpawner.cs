@@ -19,7 +19,7 @@ public class CoinSpawner : MonoBehaviour
         if (timeBetweenSpawn <= 0)
         {
             SpawnCoin();
-            timeBetweenSpawn = 3;
+            timeBetweenSpawn = Random.Range(10, 15);
         }
         else
         {
