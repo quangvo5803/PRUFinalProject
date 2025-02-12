@@ -695,13 +695,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinMaps:
-  - {fileID: 1735957161693661142, guid: 9e068d7d5b14b87409a0f1abba1ac90a, type: 3}
-  - {fileID: 5987397211755451594, guid: a6619aa8bcfab29439b0b74682e95c58, type: 3}
-  - {fileID: 1033070410240616966, guid: cf8d5b0b05f22aa438269b5c3dcabc6a, type: 3}
-  - {fileID: 3420582118735943575, guid: 4526837777cac464bb5900faa68463d5, type: 3}
-  - {fileID: 7755408191095608724, guid: 00421cff77ca7cd44938cdc7cc194b06, type: 3}
-  - {fileID: 1882584512989393407, guid: 572aa9a209acd5141a8a5b7ba109b8d3, type: 3}
-  - {fileID: 9133974452905244511, guid: 62027763acaca8f468c6ea53d33d6c22, type: 3}
+  - {fileID: 5039034716375640830, guid: 2ad26dd1563dfa342a3a1179ea39b4ed, type: 3}
+  - {fileID: 332482614936246248, guid: 100187a6bc5f80340977fe1d36b9964d, type: 3}
+  - {fileID: 8645166066685131506, guid: 4238fa7b377f93e44b5420a6dc6826f5, type: 3}
+  - {fileID: 3581265317785244030, guid: c8fcbc3887d830d43892e243859ee90b, type: 3}
+  - {fileID: 2396853967541000028, guid: 3cc723228a0e6d74ebb80ff6910e06bd, type: 3}
+  - {fileID: 6752894375326216664, guid: 8367a7579f8e7644bb9a0ac8ed4b4f7d, type: 3}
+  - {fileID: 532194307580896779, guid: 513cbc65432466941ae978450cfb1076, type: 3}
   positionSpawn:
   - {fileID: 1724627990}
   - {fileID: 978235284}

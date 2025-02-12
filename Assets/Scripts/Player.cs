@@ -66,17 +66,8 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "Coin")
         {
-            Debug.Log("Coin");
-            other.transform.position = new Vector3(
-                other.transform.position.x,
-                other.transform.position.y + 1f,
-                other.transform.position.z
-            );
-            Destroy(other.gameObject);
-        }
-        if (other.gameObject.tag == "MainCamera")
-        {
-            Debug.Log("GameOver");
+            other.transform.position += Vector3.up * 0.5f;
+            Destroy(other.gameObject, 0.2f);
         }
     }
 }
