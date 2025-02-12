@@ -64,15 +64,19 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("OnTriggerEnter2D");
         if (other.gameObject.tag == "Coin")
         {
+            Debug.Log("Coin");
             other.transform.position = new Vector3(
                 other.transform.position.x,
                 other.transform.position.y + 1f,
                 other.transform.position.z
             );
             Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "MainCamera")
+        {
+            Debug.Log("GameOver");
         }
     }
 }
