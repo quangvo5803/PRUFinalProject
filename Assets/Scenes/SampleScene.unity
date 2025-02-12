@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 135480297}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: -3, z: 0}
+  m_LocalPosition: {x: 10, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -547,6 +547,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1875699540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &978235283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 978235284}
+  m_Layer: 0
+  m_Name: CoinP3
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &978235284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978235283}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: -8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1384069116}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1016539053
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,10 +699,10 @@ MonoBehaviour:
   - {fileID: 7648945547821909412, guid: ccd9d40d2d6574242a7dd9e377c10834, type: 3}
   - {fileID: 2471658943185827242, guid: a6b0860657ec6e74e9d0a9c0a84726b2, type: 3}
   - {fileID: 3042387439975714234, guid: b3607d92882ba254fa637f7d118b4c75, type: 3}
-  - {fileID: 4178564036417740087, guid: c3770d729a9e1ad4a9a3796135109e6a, type: 3}
   positionSpawn:
   - {fileID: 1724627990}
   - {fileID: 135480298}
+  - {fileID: 978235284}
   startTime: 5
 --- !u!4 &1093784867
 Transform:
@@ -908,6 +939,7 @@ Transform:
   m_Children:
   - {fileID: 1724627990}
   - {fileID: 135480298}
+  - {fileID: 978235284}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1411064579
@@ -1101,7 +1133,7 @@ Transform:
   m_GameObject: {fileID: 1724627989}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: -5, z: 0}
+  m_LocalPosition: {x: 10, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
