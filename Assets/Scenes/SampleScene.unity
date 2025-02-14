@@ -665,6 +665,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1037717292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1037717293}
+  - component: {fileID: 1037717294}
+  m_Layer: 0
+  m_Name: ZombieSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1037717293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037717292}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1037717294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037717292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ff3e2fc96d65a41ac9208e4a33ec91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombiePrefabs:
+  - {fileID: 4713210161385201409, guid: 8a3ccb10bd445ea428f0e57719877022, type: 3}
+  - {fileID: 6573959960108242305, guid: 2b58b3a83c5264e4dbcd65d820f72ec4, type: 3}
+  - {fileID: 2414279472117144577, guid: 4151d73c9c086894ab62cb4efc67738e, type: 3}
+  - {fileID: 4405183898720541564, guid: ea66a1674e9c2874386b1689ca83e605, type: 3}
+  startTime: 5
+  spawnTime: 0
 --- !u!1 &1093784865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,3 +1490,4 @@ SceneRoots:
   - {fileID: 1093784867}
   - {fileID: 1176585586}
   - {fileID: 1384069116}
+  - {fileID: 1037717293}
