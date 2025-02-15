@@ -7,6 +7,7 @@ TagManager:
   - Coin
   - Zombie
   - Zombie1
+  - Zapper
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,33 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Layer 1
+    uniqueID: 2146547657
+    locked: 0
+  - name: Layer 2
+    uniqueID: 1815686631
+    locked: 0
+  - name: Layer 3
+    uniqueID: 1340189297
+    locked: 0
+  - name: Layer 4
+    uniqueID: 3808060285
+    locked: 0
+  - name: Layer 5
+    uniqueID: 86034547
+    locked: 0
+  - name: Road
+    uniqueID: 107607637
+    locked: 0
+  - name: Coin
+    uniqueID: 3455447399
+    locked: 0
+  - name: Player
+    uniqueID: 2525083993
+    locked: 0
+  - name: Zapper
+    uniqueID: 510699591
     locked: 0
   - name: Zombie
     uniqueID: 2804867885
