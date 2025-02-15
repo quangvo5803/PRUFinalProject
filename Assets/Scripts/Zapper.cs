@@ -14,12 +14,13 @@ public class Zapper : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         zapperCollider = GetComponent<Collider2D>();
-        animator.speed = 1f;
+        animator.speed = Random.Range(1f, 1.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //On Off Laser
         if (spriteRenderer.sprite == laserOn)
         {
             zapperCollider.enabled = true;
@@ -27,6 +28,16 @@ public class Zapper : MonoBehaviour
         else
         {
             zapperCollider.enabled = false;
+        }
+
+        transform.position = new Vector3(
+            transform.position.x - 4.0f * Time.deltaTime,
+            transform.position.y,
+            transform.position.z
+        );
+        if (transform.position.x < -15)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
