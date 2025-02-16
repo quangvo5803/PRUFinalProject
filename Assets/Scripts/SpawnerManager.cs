@@ -21,6 +21,8 @@ public class SpawnerManager : MonoBehaviour
     private float startTimeZapper = 13;
     private float spawnTimeZapper;
 
+    private bool isPlaying = true;
+
     void Start()
     {
         spawnTimeCoin = startTimeCoin;
@@ -30,6 +32,10 @@ public class SpawnerManager : MonoBehaviour
 
     void Update()
     {
+        if (!isPlaying)
+        {
+            return;
+        }
         //Spawning Coin
         if (spawnTimeCoin <= 0)
         {
@@ -163,4 +169,8 @@ public class SpawnerManager : MonoBehaviour
     }
 
     // QuangVV - 2025/02/12 - Create a method to spawn coins - End
+    public void StopGame()
+    {
+        isPlaying = false;
+    }
 }
