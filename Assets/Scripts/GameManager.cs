@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,10 +9,10 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Background background;
     public SpawnerManager spawnerManager;
+    public bool IsPlaying = true;
     private int multiScore = 1;
     private double currentScore = 0;
     private double accumulatedTime = 0;
-
     private int coin = 0;
 
     private void Awake()
@@ -35,6 +36,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!IsPlaying)
+        {
+            return;
+        }
         UpdateScoreUI();
     }
 
@@ -56,8 +61,6 @@ public class GameManager : MonoBehaviour
 
     public void StopGame()
     {
-        multiScore = 0;
-        background.StopGame();
-        spawnerManager.StopGame();
+        IsPlaying = false;
     }
 }

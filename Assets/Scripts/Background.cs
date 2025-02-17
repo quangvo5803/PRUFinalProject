@@ -7,7 +7,6 @@ public class Background : MonoBehaviour
     private float[] speeds = { 5.0f, 0.2f, 1, 2, 3, 4 };
     private float[] resetPosition = { -20.8f, -33, -33, -33, -33, -33 };
     private float[] startPosition = { 21, 7, 33, 33, 33, 33, 33 };
-    private bool isPlaying = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,7 +22,7 @@ public class Background : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isPlaying)
+        if (!GameManager.Instance.IsPlaying)
             return;
 
         for (int i = 0; i < layers.Length; i++)
@@ -41,10 +40,5 @@ public class Background : MonoBehaviour
                 );
             }
         }
-    }
-
-    public void StopGame()
-    {
-        isPlaying = false;
     }
 }

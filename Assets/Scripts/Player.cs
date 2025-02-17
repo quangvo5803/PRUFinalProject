@@ -21,6 +21,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.Instance.IsPlaying)
+        {
+            return;
+        }
         horizontalInput = Input.GetKey(KeyCode.Space);
         // FlyOn
         if (horizontalInput)
@@ -57,6 +61,7 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.tag == "Obstacle")
         {
+            Debug.Log("Player Dead");
             animator.SetBool("IsDead", true);
             GameManager.Instance.StopGame();
         }

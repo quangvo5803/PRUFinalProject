@@ -19,6 +19,10 @@ public class Zombie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.Instance.IsPlaying)
+        {
+            return;
+        }
         transform.position = new Vector3(
             transform.position.x - speed * Time.deltaTime,
             transform.position.y,

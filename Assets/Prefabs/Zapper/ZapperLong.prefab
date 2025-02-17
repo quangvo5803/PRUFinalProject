@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8632c746ad8f46a43b6123fe5d9ba932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserOn: {fileID: 0}
+  laserOn: {fileID: 21300000, guid: d4712b8689d873b4a81e376174bcb3b4, type: 3}
 --- !u!61 &-5095205713636541962
 BoxCollider2D:
   m_ObjectHideFlags: 0
