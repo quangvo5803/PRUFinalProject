@@ -30,6 +30,10 @@ public class SpawnerManager : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.Instance.IsPlaying)
+        {
+            return;
+        }
         //Spawning Coin
         if (spawnTimeCoin <= 0)
         {

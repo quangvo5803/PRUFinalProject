@@ -11,9 +11,6 @@ public class Player : MonoBehaviour
     bool isFly = false;
     bool isGround = true;
     private Animator animator;
-    int multiScore = 1;
-    double currentScore = 0;
-    private double accumulatedTime = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,7 +21,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetKey(KeyCode.Space);
+        if (GameManager.Instance.IsPlaying)
+        {
+            horizontalInput = Input.GetKey(KeyCode.Space);
+        }
         // FlyOn
         if (horizontalInput)
         {
@@ -48,26 +48,22 @@ public class Player : MonoBehaviour
         /// Change Animator
         animator.SetBool("IsFlyIng", isFly);
         animator.SetBool("IsGround", isGround);
-        UpdateScore();
-    }
-
-    private void UpdateScore()
-    {
-        accumulatedTime += Time.deltaTime;
-        if (accumulatedTime >= 0.2)
-        {
-            currentScore += multiScore;
-            accumulatedTime = 0;
-        }
-        currentScoreText.text = ((uint)currentScore).ToString("D12");
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Coin")
         {
+            other.gameObject.GetComponent<Collider2D>().enabled = false;
             other.transform.position += Vector3.up * 0.5f;
             Destroy(other.gameObject, 0.2f);
+            GameManager.Instance.UpdateCoin();
+        }
+        if (other.gameObject.tag == "Obstacle")
+        {
+            Debug.Log("Player Dead");
+            animator.SetBool("IsDead", true);
+            GameManager.Instance.StopGame();
         }
     }
 }

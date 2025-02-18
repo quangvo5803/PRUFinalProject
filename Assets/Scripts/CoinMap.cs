@@ -8,6 +8,10 @@ public class CoinMap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.Instance.IsPlaying)
+        {
+            return;
+        }
         transform.position = new Vector3(
             transform.position.x - 5.0f * Time.deltaTime,
             transform.position.y,

@@ -20,6 +20,11 @@ public class Zapper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.Instance.IsPlaying)
+        {
+            animator.speed = 0;
+            return;
+        }
         //On Off Laser
         if (spriteRenderer.sprite == laserOn)
         {

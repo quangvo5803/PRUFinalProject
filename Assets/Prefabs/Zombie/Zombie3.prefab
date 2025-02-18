@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6302051261283363592}
   m_Layer: 0
   m_Name: Zombie3
-  m_TagString: Zombie
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1490099411
-  m_SortingLayer: 1
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 1553940418269799609, guid: 6bcda67225559b5499953a5abdc8fca3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
