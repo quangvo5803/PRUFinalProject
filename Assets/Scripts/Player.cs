@@ -25,9 +25,14 @@ public class Player : MonoBehaviour
         {
             horizontalInput = Input.GetKey(KeyCode.Space);
         }
+        else
+        {
+            horizontalInput = false;
+        }
         // FlyOn
         if (horizontalInput)
         {
+            Debug.Log("Fly");
             isFly = true;
             isGround = false;
             transform.Translate(0, flyPower * Time.deltaTime, 0);
