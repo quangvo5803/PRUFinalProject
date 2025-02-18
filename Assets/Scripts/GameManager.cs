@@ -7,13 +7,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public Text scoreText;
+    public Text coinText;
     public Background background;
     public SpawnerManager spawnerManager;
     public bool IsPlaying = true;
     private int multiScore = 1;
     private double currentScore = 0;
     private double accumulatedTime = 0;
-    private int coin = 0;
+    private int currentCoin = 0;
 
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        UpdateScoreUI();
+        UpdateUI();
     }
 
     // Update is called once per frame
@@ -40,23 +41,29 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        UpdateScoreUI();
+        UpdateScore();
+        UpdateUI();
     }
 
     public void UpdateCoin()
     {
-        coin++;
+        currentCoin++;
     }
 
-    private void UpdateScoreUI()
+    private void UpdateScore()
     {
         accumulatedTime += Time.deltaTime;
-        if (accumulatedTime >= 0.2)
+        if (accumulatedTime >= 0.1)
         {
             currentScore += multiScore;
             accumulatedTime = 0;
         }
+    }
+
+    private void UpdateUI()
+    {
         scoreText.text = ((uint)currentScore).ToString("D12");
+        coinText.text = currentCoin.ToString("D5");
     }
 
     public void StopGame()

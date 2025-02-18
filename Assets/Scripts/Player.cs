@@ -21,11 +21,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.Instance.IsPlaying)
+        if (GameManager.Instance.IsPlaying)
         {
-            return;
+            horizontalInput = Input.GetKey(KeyCode.Space);
         }
-        horizontalInput = Input.GetKey(KeyCode.Space);
         // FlyOn
         if (horizontalInput)
         {
@@ -55,6 +54,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "Coin")
         {
+            other.gameObject.GetComponent<Collider2D>().enabled = false;
             other.transform.position += Vector3.up * 0.5f;
             Destroy(other.gameObject, 0.2f);
             GameManager.Instance.UpdateCoin();
