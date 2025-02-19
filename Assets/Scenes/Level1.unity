@@ -1041,9 +1041,9 @@ MonoBehaviour:
   - {fileID: 2414279472117144577, guid: 4151d73c9c086894ab62cb4efc67738e, type: 3}
   - {fileID: 4405183898720541564, guid: ea66a1674e9c2874386b1689ca83e605, type: 3}
   zapperPrefabs:
-  - {fileID: 5857878162335633163, guid: 5518475793940434f8fab8a98e91ae20, type: 3}
-  - {fileID: 3225979087209494556, guid: ab0135c020af7004e9247e1cd383f752, type: 3}
-  - {fileID: 3225979087209494556, guid: 832e07269f414f44c829b19cc7d5d95b, type: 3}
+  - {fileID: 8779737087648018822, guid: 2bc19515dc2e4054f854f4261f56cbcd, type: 3}
+  - {fileID: 1147392093528035652, guid: da3a862efc7c1cf4cbf42d66c1af48fc, type: 3}
+  - {fileID: 3045176638755457923, guid: 552cff47583a84d498201d42a5635670, type: 3}
   positionSpawnZapper:
   - {fileID: 1775893112}
   - {fileID: 511094063}
