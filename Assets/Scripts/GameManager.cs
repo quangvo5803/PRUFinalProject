@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -10,7 +11,9 @@ public class GameManager : MonoBehaviour
     public Text coinText;
     public Background background;
     public SpawnerManager spawnerManager;
+    public GameObject loseMenu;
     public bool IsPlaying = true;
+    public bool IsPause = false;
     private int multiScore = 1;
     private double currentScore = 0;
     private double accumulatedTime = 0;
@@ -66,8 +69,38 @@ public class GameManager : MonoBehaviour
         coinText.text = currentCoin.ToString("D5");
     }
 
+    public void BackToHome()
+    {
+        currentCoin = 0;
+        currentScore = 0;
+        SceneManager.LoadSceneAsync(0);
+    }
+
+    public void PauseGame()
+    {
+        IsPlaying = false;
+        IsPause = true;
+        Debug.Log("Pause Game");
+    }
+
+    public void ResumeGame()
+    {
+        IsPlaying = true;
+        IsPause = false;
+    }
+
     public void StopGame()
     {
         IsPlaying = false;
+        currentCoin = 0;
+        currentScore = 0;
+        loseMenu.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        currentCoin = 0;
+        currentScore = 0;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

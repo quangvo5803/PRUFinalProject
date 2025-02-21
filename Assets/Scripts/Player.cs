@@ -21,6 +21,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.IsPause)
+        {
+            animator.speed = 0;
+            return;
+        }
+        else
+        {
+            animator.speed = 1;
+        }
         if (GameManager.Instance.IsPlaying)
         {
             horizontalInput = Input.GetKey(KeyCode.Space);
