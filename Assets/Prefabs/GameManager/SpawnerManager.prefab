@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9176011980004606931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5423811064335464444}
+  - component: {fileID: 7560225926593801849}
+  m_Layer: 0
+  m_Name: SpawnerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5423811064335464444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9176011980004606931}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7560225926593801849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9176011980004606931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bfc4812a3456f4bb39b09472d6a4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinMaps:
+  - {fileID: 3518372259613998275, guid: 2ba885409d4745e47992c6f402343eca, type: 3}
+  - {fileID: 314245749491168388, guid: 513cbc65432466941ae978450cfb1076, type: 3}
+  - {fileID: 2102072302992453402, guid: 100187a6bc5f80340977fe1d36b9964d, type: 3}
+  - {fileID: 5688006177651735721, guid: 4238fa7b377f93e44b5420a6dc6826f5, type: 3}
+  - {fileID: 499295693368746395, guid: e43723addf2a6a242a07c5bcb8cc3dea, type: 3}
+  - {fileID: 2292424663902101636, guid: c8fcbc3887d830d43892e243859ee90b, type: 3}
+  - {fileID: 3642687103201851592, guid: 3cc723228a0e6d74ebb80ff6910e06bd, type: 3}
+  positionSpawnCoin:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  zombiePrefabs:
+  - {fileID: 4713210161385201409, guid: 8a3ccb10bd445ea428f0e57719877022, type: 3}
+  - {fileID: 6573959960108242305, guid: 2b58b3a83c5264e4dbcd65d820f72ec4, type: 3}
+  - {fileID: 2414279472117144577, guid: 4151d73c9c086894ab62cb4efc67738e, type: 3}
+  - {fileID: 4405183898720541564, guid: ea66a1674e9c2874386b1689ca83e605, type: 3}
+  zapperPrefabs:
+  - {fileID: 8779737087648018822, guid: 2bc19515dc2e4054f854f4261f56cbcd, type: 3}
+  - {fileID: 1147392093528035652, guid: da3a862efc7c1cf4cbf42d66c1af48fc, type: 3}
+  - {fileID: 3045176638755457923, guid: 552cff47583a84d498201d42a5635670, type: 3}
+  positionSpawnZapper:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
