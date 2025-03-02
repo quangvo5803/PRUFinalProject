@@ -14,10 +14,12 @@ public class GameManager : MonoBehaviour
     public GameObject loseMenu;
     public bool IsPlaying = true;
     public bool IsPause = false;
-    private int multiScore = 1;
+    public bool IsBoss = false;
+    private int multiScore = 5;
     private double currentScore = 0;
     private double accumulatedTime = 0;
     private int currentCoin = 0;
+    private int totalCoin = 0;
 
     private void Awake()
     {
@@ -55,6 +57,11 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScore()
     {
+        if (currentScore >= 100)
+        {
+            IsBoss = true;
+            return;
+        }
         accumulatedTime += Time.deltaTime;
         if (accumulatedTime >= 0.1)
         {
@@ -92,6 +99,8 @@ public class GameManager : MonoBehaviour
     public void StopGame()
     {
         IsPlaying = false;
+        totalCoin += currentCoin;
+        SaveBestScore();
         currentCoin = 0;
         currentScore = 0;
         loseMenu.SetActive(true);
@@ -111,6 +120,18 @@ public class GameManager : MonoBehaviour
             int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
             PlayerPrefs.SetInt("UnlockedLevel", nextLevel);
             PlayerPrefs.SetInt("ReachedLevel", nextLevel);
+            PlayerPrefs.Save();
+            multiScore += 5;
+        }
+    }
+
+    private void SaveBestScore()
+    {
+        double bestScore = PlayerPrefs.GetFloat("BestScore", 0);
+
+        if (currentScore > bestScore)
+        {
+            PlayerPrefs.SetFloat("BestScore", (float)currentScore);
             PlayerPrefs.Save();
         }
     }

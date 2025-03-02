@@ -21,6 +21,10 @@ public class SpawnerManager : MonoBehaviour
     private float startTimeZapper = 13;
     private float spawnTimeZapper;
 
+    //Spawning Boss
+    public GameObject boss;
+    private int bossCount = 0;
+
     void Start()
     {
         spawnTimeCoin = startTimeCoin;
@@ -30,6 +34,11 @@ public class SpawnerManager : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.IsBoss && bossCount == 0)
+        {
+            bossCount++;
+            Instantiate(boss);
+        }
         if (!GameManager.Instance.IsPlaying)
         {
             return;

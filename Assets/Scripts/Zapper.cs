@@ -20,8 +20,12 @@ public class Zapper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.Instance.IsPlaying)
+        if (GameManager.Instance.IsBoss || !GameManager.Instance.IsPlaying)
         {
+            if (GameManager.Instance.IsBoss)
+            {
+                Destroy(this.gameObject);
+            }
             animator.speed = 0;
             return;
         }

@@ -21,6 +21,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.IsBoss)
+        {
+            animator.SetBool("IsBoss", true);
+        }
         if (GameManager.Instance.IsPause)
         {
             animator.speed = 0;
@@ -41,7 +45,6 @@ public class Player : MonoBehaviour
         // FlyOn
         if (horizontalInput)
         {
-            Debug.Log("Fly");
             isFly = true;
             isGround = false;
             transform.Translate(0, flyPower * Time.deltaTime, 0);
@@ -75,7 +78,6 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.tag == "Obstacle")
         {
-            Debug.Log("Player Dead");
             animator.SetBool("IsDead", true);
             GameManager.Instance.StopGame();
         }

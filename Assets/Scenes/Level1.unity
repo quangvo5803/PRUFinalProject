@@ -461,6 +461,7 @@ MonoBehaviour:
   loseMenu: {fileID: 1060279276}
   IsPlaying: 1
   IsPause: 0
+  IsBoss: 0
 --- !u!1 &879339532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1064,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7560225926593801849, guid: 462edcb29ceef6e4da3935de0ba82c9d, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 6273504765761458709, guid: eac271d10c4d58f4c86867c02d624f27, type: 3}
     - target: {fileID: 7560225926593801849, guid: 462edcb29ceef6e4da3935de0ba82c9d, type: 3}
       propertyPath: 'positionSpawnCoin.Array.data[0]'
       value: 
