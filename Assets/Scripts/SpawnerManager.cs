@@ -1,4 +1,4 @@
-//QuangVV - 2025/02/12 - Create a script to manage all of the spawning.
+﻿//QuangVV - 2025/02/12 - Create a script to manage all of the spawning.
 using UnityEngine;
 
 public class SpawnerManager : MonoBehaviour
@@ -23,7 +23,7 @@ public class SpawnerManager : MonoBehaviour
 
     // Spawning Rocket
     public GameObject rocketPrefab;
-    public GameObject warningSignPrefab; // D?u ch?m than c?nh b�o
+    public GameObject warningSignPrefab; // Dấu ch?m than c?nh báo
     public AudioClip warningSound;
     public AudioClip rocketSound;
     private float startTimeRocket = 10;
