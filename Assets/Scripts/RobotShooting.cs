@@ -15,16 +15,17 @@ public class RobotShooting : MonoBehaviour
         InvokeRepeating(nameof(Shoot), 0f, 0.5f);
     }
 
-  
-
     void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = new Vector2(bulletSpeed, 0); // Đạn bay sang phải
+        if (GameManager.Instance.IsPlaying)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = new Vector2(bulletSpeed, 0); // Đạn bay sang phải
 
-        // Phát âm thanh bắn, luôn phát lại từ đầu
-        audioSource.Stop();
-        audioSource.PlayOneShot(shootSound);
+            // Phát âm thanh bắn, luôn phát lại từ đầu
+            audioSource.Stop();
+            audioSource.PlayOneShot(shootSound);
+        }
     }
 }

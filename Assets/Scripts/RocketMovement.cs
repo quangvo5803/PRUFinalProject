@@ -3,10 +3,14 @@ using UnityEngine;
 public class RocketMovement : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public float speed = 35f;
+    public float speed = 20f;
 
     void Update()
     {
+        if (!GameManager.Instance.IsPlaying)
+        {
+            return;
+        }
         transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
 
