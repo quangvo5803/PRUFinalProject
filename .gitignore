@@ -9,6 +9,7 @@
 
 # Cau hinh ca nhan cua Vs Code
 .vscode/
+.vs/
 UserSettings/
 
 # Tap tin du an C# va Visual Studio
