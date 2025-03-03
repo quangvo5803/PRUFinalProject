@@ -1,0 +1,103 @@
+using System;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Player : MonoBehaviour
+{
+    public Text currentScoreText;
+    public AudioClip flySound;
+    private AudioSource audioSource;
+    public AudioClip coinSound;
+    public AudioClip zapperSound;
+    public AudioClip zombieSound;
+
+    bool horizontalInput;
+    float flyPower = 5f;
+    float fallPower = 4.5f;
+    bool isFly = false;
+    bool isGround = true;
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        audioSource = gameObject.AddComponent<AudioSource>();
+    }
+
+    void Update()
+    {
+        if (GameManager.Instance.IsPause)
+        {
+            animator.speed = 0;
+            return;
+        }
+        else
+        {
+            animator.speed = 1;
+        }
+
+        if (GameManager.Instance.IsPlaying)
+        {
+            horizontalInput = Input.GetKey(KeyCode.Space);
+        }
+        else
+        {
+            horizontalInput = false;
+        }
+
+        if (horizontalInput)
+        {
+            if (!isFly)
+            {
+                if (!audioSource.isPlaying || audioSource.time > 0.9f) // Ð?m b?o âm thanh không quá dài
+                {
+                    audioSource.clip = flySound;
+                    audioSource.time = 0; // Reset th?i gian v? 0 ð? phát t? ð?u
+                    audioSource.Play();
+                }
+            }
+
+            isFly = true;
+            isGround = false;
+            transform.Translate(0, flyPower * Time.deltaTime, 0);
+        }
+        else
+        {
+            isFly = false;
+            transform.Translate(0, -fallPower * Time.deltaTime, 0);
+        }
+
+        if (transform.position.y < -3.5f)
+        {
+            isGround = true;
+            transform.position = new Vector3(transform.position.x, -3.5f, transform.position.z);
+        }
+
+        animator.SetBool("IsFlyIng", isFly);
+        animator.SetBool("IsGround", isGround);
+    }
+
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Coin")
+        {
+            other.gameObject.GetComponent<Collider2D>().enabled = false;
+            other.transform.position += Vector3.up * 0.5f;
+            Destroy(other.gameObject, 0.2f);
+            GameManager.Instance.UpdateCoin();
+            audioSource.PlayOneShot(coinSound);
+        }
+        if (other.gameObject.tag == "Obstacle")
+        {
+            Debug.Log("Player Dead");
+            audioSource.PlayOneShot(zombieSound);
+
+            animator.SetBool("IsDead", true);
+
+            GameManager.Instance.StopGame();
+
+        }
+       
+    }
+}

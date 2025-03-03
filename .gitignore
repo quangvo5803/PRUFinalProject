@@ -1,0 +1,30 @@
+# Thu muc Unity tu dong tao
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Cau hinh ca nhan cua Vs Code
+.vscode/
+UserSettings/
+
+# Tap tin du an C# va Visual Studio
+*.csproj
+*.sln
+*.userprefs
+
+# File build va tam thoi
+*.apk
+*.aab
+*.exe
+*.tmp
+*.bak
+*.old
+*.log
+
+# Tap tin he dieu hanh
+.DS_Store
+Thumbs.db

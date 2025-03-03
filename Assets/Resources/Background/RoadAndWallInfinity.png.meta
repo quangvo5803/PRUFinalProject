@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: ff9a08628cb10a249b005729dfd507d3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1306781327610160276
+    second: RoadAndWallInfinity_0
+  - first:
+      213: -2639116458746469035
+    second: RoadAndWallInfinity_1
+  - first:
+      213: 8048537042064324828
+    second: RoadAndWallInfinity_2
+  - first:
+      213: -5336202285486582174
+    second: RoadAndWallInfinity_3
+  - first:
+      213: 9180188455312472781
+    second: RoadAndWallInfinity_4
+  - first:
+      213: 8553443441590257299
+    second: RoadAndWallInfinity_5
+  - first:
+      213: -1611606492729576969
+    second: RoadAndWallInfinity_6
+  - first:
+      213: -5811240621120503252
+    second: RoadAndWallInfinity_7
+  - first:
+      213: -6650468443288429277
+    second: RoadAndWallInfinity_8
+  - first:
+      213: 6785284428439168907
+    second: RoadAndWallInfinity_9
+  - first:
+      213: -7719592086118851573
+    second: RoadAndWallInfinity_10
+  - first:
+      213: 7981192829796448159
+    second: RoadAndWallInfinity_11
+  - first:
+      213: -3321179922925430116
+    second: RoadAndWallInfinity_12
+  - first:
+      213: 7769608787022689448
+    second: RoadAndWallInfinity_13
+  - first:
+      213: -2860573511924762576
+    second: RoadAndWallInfinity_14
+  - first:
+      213: 1469742440657286974
+    second: RoadAndWallInfinity_15
+  - first:
+      213: 4914044571113438304
+    second: RoadAndWallInfinity_16
+  - first:
+      213: -6141375669530779036
+    second: RoadAndWallInfinity_17
+  - first:
+      213: 5157178347672205096
+    second: RoadAndWallInfinity_18
+  - first:
+      213: -1305706369801265799
+    second: RoadAndWallInfinity_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1650
+        width: 21
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bdea06e416ddde0800000000000000
+      internalID: -1306781327610160276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1743
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555a78b3099ff5bd0800000000000000
+      internalID: -2639116458746469035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_2
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 1650
+        width: 22
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd831d9fbc522bf60800000000000000
+      internalID: 8048537042064324828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_3
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 1743
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 266d1f33b4002f5b0800000000000000
+      internalID: -5336202285486582174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_4
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 1650
+        width: 22
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcaba0ae2c4966f70800000000000000
+      internalID: 9180188455312472781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_5
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1743
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 396c166fd7fe3b670800000000000000
+      internalID: 8553443441590257299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_6
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 1651
+        width: 22
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1f32bfe6c62a9e0800000000000000
+      internalID: -1611606492729576969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_7
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 1744
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c22cac1c1735a5fa0800000000000000
+      internalID: -5811240621120503252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_8
+      rect:
+        serializedVersion: 2
+        x: 5489
+        y: 1650
+        width: 35
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d19dfbf2ac4b3a0800000000000000
+      internalID: -6650468443288429277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_9
+      rect:
+        serializedVersion: 2
+        x: 5528
+        y: 1746
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b872b19dc3c2a2e50800000000000000
+      internalID: 6785284428439168907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_10
+      rect:
+        serializedVersion: 2
+        x: 5542
+        y: 1743
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c18f7d5ef7ed490800000000000000
+      internalID: -7719592086118851573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_11
+      rect:
+        serializedVersion: 2
+        x: 6165
+        y: 1650
+        width: 22
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9779efa794e2ce60800000000000000
+      internalID: 7981192829796448159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_12
+      rect:
+        serializedVersion: 2
+        x: 6191
+        y: 1743
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9adedad47cc8e1d0800000000000000
+      internalID: -3321179922925430116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_13
+      rect:
+        serializedVersion: 2
+        x: 6832
+        y: 1650
+        width: 22
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4bd32d60233db60800000000000000
+      internalID: 7769608787022689448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_14
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 1743
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03835dffb833d48d0800000000000000
+      internalID: -2860573511924762576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_15
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 1650
+        width: 22
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3771b676f2956410800000000000000
+      internalID: 1469742440657286974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_16
+      rect:
+        serializedVersion: 2
+        x: 7526
+        y: 1743
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c37af6081323440800000000000000
+      internalID: 4914044571113438304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_17
+      rect:
+        serializedVersion: 2
+        x: 8155
+        y: 1650
+        width: 22
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4622461fd5375caa0800000000000000
+      internalID: -6141375669530779036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_18
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 1743
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8277650226af19740800000000000000
+      internalID: 5157178347672205096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoadAndWallInfinity_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 8824
+        height: 1559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97dd70f79f231ede0800000000000000
+      internalID: -1305706369801265799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RoadAndWallInfinity_0: -1306781327610160276
+      RoadAndWallInfinity_1: -2639116458746469035
+      RoadAndWallInfinity_10: -7719592086118851573
+      RoadAndWallInfinity_11: 7981192829796448159
+      RoadAndWallInfinity_12: -3321179922925430116
+      RoadAndWallInfinity_13: 7769608787022689448
+      RoadAndWallInfinity_14: -2860573511924762576
+      RoadAndWallInfinity_15: 1469742440657286974
+      RoadAndWallInfinity_16: 4914044571113438304
+      RoadAndWallInfinity_17: -6141375669530779036
+      RoadAndWallInfinity_18: 5157178347672205096
+      RoadAndWallInfinity_19: -1305706369801265799
+      RoadAndWallInfinity_2: 8048537042064324828
+      RoadAndWallInfinity_3: -5336202285486582174
+      RoadAndWallInfinity_4: 9180188455312472781
+      RoadAndWallInfinity_5: 8553443441590257299
+      RoadAndWallInfinity_6: -1611606492729576969
+      RoadAndWallInfinity_7: -5811240621120503252
+      RoadAndWallInfinity_8: -6650468443288429277
+      RoadAndWallInfinity_9: 6785284428439168907
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

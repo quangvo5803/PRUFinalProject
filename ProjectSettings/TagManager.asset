@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Coin
+  - Obstacle
+  - Rocket
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Layer 1
+    uniqueID: 2146547657
+    locked: 0
+  - name: Layer 2
+    uniqueID: 1815686631
+    locked: 0
+  - name: Layer 3
+    uniqueID: 1340189297
+    locked: 0
+  - name: Layer 4
+    uniqueID: 3808060285
+    locked: 0
+  - name: Layer 5
+    uniqueID: 86034547
+    locked: 0
+  - name: Road
+    uniqueID: 107607637
+    locked: 0
+  - name: Coin
+    uniqueID: 3455447399
+    locked: 0
+  - name: Player
+    uniqueID: 2525083993
+    locked: 0
+  - name: Zapper
+    uniqueID: 510699591
+    locked: 0
+  - name: Zombie
+    uniqueID: 2804867885
+    locked: 0
+  - name: Rocket
+    uniqueID: 923504111
+    locked: 0
+  - name: Fire
+    uniqueID: 3683469577
+    locked: 0
+  - name: Cloud
+    uniqueID: 1632035479
+    locked: 0
+  - name: Star
+    uniqueID: 4140920135
+    locked: 0
+  - name: Warning
+    uniqueID: 779689669
+    locked: 0
+  - name: Robot
+    uniqueID: 177306619
+    locked: 0
+  - name: Lazer
+    uniqueID: 83255921
+    locked: 0
+  m_RenderingLayers:
+  - Default
