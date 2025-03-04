@@ -1183,6 +1183,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1198416522856140601, guid: a436e169ae2b6cf4ea3bf07f7986ca86, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 3541656667264453290, guid: 1cdbcc6b251f302459893f8ef8a454a7, type: 3}
+    - target: {fileID: 1198416522856140601, guid: a436e169ae2b6cf4ea3bf07f7986ca86, type: 3}
       propertyPath: currentScoreText
       value: 
       objectReference: {fileID: 1720372923}
