@@ -1,4 +1,6 @@
 //QuangVV - 2025/02/12 - Create a script to manage all of the spawning.
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnerManager : MonoBehaviour
@@ -11,7 +13,12 @@ public class SpawnerManager : MonoBehaviour
 
     //Spawning Zombie
     public GameObject[] zombiePrefabs;
-    private Vector3 spawnZombiePosition = new Vector3(19.64f, -3.72f, 0.08f);
+    private Vector3[] spawnZombiePosition = new Vector3[]
+    {
+        new Vector3(19.64f, -3.72f, 0.08f),
+        new Vector3(20.64f, -3.72f, 0.08f),
+        new Vector3(21.64f, -3.72f, 0.08f),
+    };
     private float startTimeZombie = 8;
     private float spawnTimeZombie;
 
@@ -104,22 +111,24 @@ public class SpawnerManager : MonoBehaviour
     // ThangDCS - 2025/02/12 - Create a method to spawn zombies - Start
     void SpawnZombie()
     {
-        int numberOfZombies = Random.Range(1, 4);
-        bool[] spawned = new bool[zombiePrefabs.Length - 1];
-
+        int numberOfZombies = Random.Range(1, 5);
+        List<int> availableIndexes = new List<int>();
+        for (int i = 0; i < zombiePrefabs.Length; i++)
+        {
+            availableIndexes.Add(i); // Thêm tất cả các chỉ mục zombie vào danh sách
+        }
         for (int i = 0; i < numberOfZombies; i++)
         {
-            int randomZombieIndex;
-            do
-            {
-                randomZombieIndex = Random.Range(0, zombiePrefabs.Length - 1);
-            } while (spawned[randomZombieIndex]);
+            if (availableIndexes.Count == 0)
+                break; // Nếu không còn zombie nào chưa spawn, dừng lại
 
-            spawned[randomZombieIndex] = true;
+            int randomIndex = Random.Range(0, availableIndexes.Count);
+            int randomZombieIndex = availableIndexes[randomIndex];
+            availableIndexes.RemoveAt(randomIndex); // Loại bỏ zombie đã spawn để tránh trùng lặp
 
             GameObject zombie = Instantiate(
                 zombiePrefabs[randomZombieIndex],
-                spawnZombiePosition,
+                spawnZombiePosition[Random.Range(0, 3)],
                 Quaternion.identity
             );
 
@@ -137,7 +146,7 @@ public class SpawnerManager : MonoBehaviour
     void SpawnZapper()
     {
         int numberOfZapper = Random.Range(1, 4);
-        int randomZapperIndex = Random.Range(0, zapperPrefabs.Length - 1);
+        int randomZapperIndex = Random.Range(0, zapperPrefabs.Length);
         int randomPostion;
         if (randomZapperIndex == 0)
         {
