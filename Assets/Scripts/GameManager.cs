@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScore()
     {
-        if (currentScore >= 100)
+        if (currentScore >= 10000000)
         {
             IsBoss = true;
             return;

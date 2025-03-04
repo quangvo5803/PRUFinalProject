@@ -164,7 +164,7 @@ public class SpawnerManager : MonoBehaviour
                     Quaternion.Euler(0, 0, 120)
                 );
             }
-            else
+            else if (randomZapperIndex == 2)
             {
                 Instantiate(
                     zapperPrefabs[randomZapperIndex],

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Coin
   - Obstacle
+  - Bullet
+  - SupportItem
   layers:
   - Default
   - TransparentFX
@@ -72,6 +74,9 @@ TagManager:
     locked: 0
   - name: Zombie
     uniqueID: 2804867885
+    locked: 0
+  - name: SupportItem
+    uniqueID: 1042688313
     locked: 0
   m_RenderingLayers:
   - Default

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public GameObject bullet;
     public Text currentScoreText;
     bool horizontalInput;
     float flyPower = 5f;
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
         if (GameManager.Instance.IsPlaying)
         {
             horizontalInput = Input.GetKey(KeyCode.Space);
+            Shooting();
         }
         else
         {
@@ -80,6 +82,23 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("IsDead", true);
             GameManager.Instance.StopGame();
+        }
+        if (other.gameObject.tag == "SupportItem")
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
+    void Shooting()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 bulletPostion = new Vector3(
+                -3.4f,
+                transform.position.y - 0.05f,
+                transform.position.z
+            );
+            Instantiate(bullet, bulletPostion, Quaternion.identity);
         }
     }
 }
