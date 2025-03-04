@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public bool IsPause = false;
     public bool IsBoss = false;
     private int multiScore = 5;
-    private double currentScore = 0;
+    private int currentScore = 0;
     private double accumulatedTime = 0;
     private int currentCoin = 0;
     private int totalCoin = 0;
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScore()
     {
-        if (currentScore >= 10000000)
+        if (currentScore >= 100)
         {
             IsBoss = true;
             return;
@@ -111,6 +111,12 @@ public class GameManager : MonoBehaviour
         currentCoin = 0;
         currentScore = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void WiningGame()
+    {
+        UnlockNextLevel();
+        totalCoin += currentCoin;
     }
 
     public void UnlockNextLevel()

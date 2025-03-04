@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    private int currentHealth = 500;
+    private int currentHealth = 100;
     private int hurtHeath = 450;
     private bool isHurt = false;
     private bool isAttack = false;
@@ -53,19 +53,30 @@ public class Boss : MonoBehaviour
         animator.SetBool("IsWalk", isWalk);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        //Chỗ ni xử lí khi đụng đạn trừ bao nhiêu máu đó rồi kêu hàm hurt
+        if (other.gameObject.tag == "Bullet")
+        {
+            Destroy(other.gameObject);
+            Hurt();
+        }
     }
 
     void Hurt()
     {
+        if (currentHealth <= 0)
+        {
+            animator.SetBool("IsDead", true);
+            Invoke("DestroyObject", 1f);
+            return;
+        }
+        currentHealth -= 10;
         if (currentHealth <= hurtHeath)
         {
-            hurtHeath -= 50;
+            hurtHeath -= 100;
             isHurt = true;
             animator.SetBool("IsHurt", isHurt);
-            Invoke("StopHurt", 0.5f);
+            Invoke("StopHurt", 2f);
         }
         isHurt = false;
     }
@@ -74,5 +85,10 @@ public class Boss : MonoBehaviour
     {
         isHurt = false;
         animator.SetBool("IsHurt", isHurt);
+    }
+
+    void DestroyObject()
+    {
+        Destroy(this.gameObject);
     }
 }
