@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     private double accumulatedTime = 0;
     private int currentCoin = 0;
     private int totalCoin = 0;
+    public int playerDamage = 5;
+    public int robotDamage = 3;
 
     private void Awake()
     {

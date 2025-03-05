@@ -32,11 +32,23 @@ public class SpawnerManager : MonoBehaviour
     public GameObject boss;
     private int bossCount = 0;
 
+    // Spawning Rocket
+    public GameObject rocketPrefab;
+    public GameObject warningSignPrefab; // Dấu ch?m than c?nh báo
+    public AudioClip warningSound;
+    public AudioClip rocketSound;
+    private float startTimeRocket = 10;
+    private float spawnTimeRocket;
+    private float minY = -4.7f;
+    private float maxY = 4.7f;
+    private GameObject currentWarning;
+    private AudioSource warningAudioSource;
     void Start()
     {
         spawnTimeCoin = startTimeCoin;
         spawnTimeZombie = startTimeZombie;
         spawnTimeZapper = startTimeZapper;
+        spawnTimeRocket = startTimeRocket;
     }
 
     void Update()
@@ -79,6 +91,16 @@ public class SpawnerManager : MonoBehaviour
         else
         {
             spawnTimeZapper -= Time.deltaTime;
+        }
+        //Spawning Rocket
+        if (spawnTimeRocket <= 0)
+        {
+            StartCoroutine(ShowRocketWarning());
+            spawnTimeRocket = Random.Range(8, 12);
+        }
+        else
+        {
+            spawnTimeRocket -= Time.deltaTime;
         }
     }
 
@@ -183,6 +205,26 @@ public class SpawnerManager : MonoBehaviour
             }
         }
     }
+    System.Collections.IEnumerator ShowRocketWarning()
+    {
+        float randomY = Random.Range(minY, maxY);
+        Vector3 warningPosition = new Vector3(8f, randomY, 0);
+        currentWarning = Instantiate(warningSignPrefab, warningPosition, Quaternion.identity);
 
+        warningAudioSource = currentWarning.AddComponent<AudioSource>();
+        warningAudioSource.clip = warningSound;
+        warningAudioSource.loop = true;
+        warningAudioSource.Play();
+
+        yield return new WaitForSeconds(1.5f);
+
+        Destroy(currentWarning);
+        warningAudioSource.Stop();
+
+        Vector3 spawnPosition = new Vector3(10f, randomY, 0);
+        GameObject rocket = Instantiate(rocketPrefab, spawnPosition, Quaternion.identity);
+
+        AudioSource.PlayClipAtPoint(rocketSound, spawnPosition);
+    }
     // QuangVV - 2025/02/12 - Create a method to spawn coins - End
 }
