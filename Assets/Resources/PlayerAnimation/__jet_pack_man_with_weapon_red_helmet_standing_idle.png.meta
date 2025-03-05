@@ -497,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_0: 711802219907910901
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_1: -8515700806063721991
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_10: -917553417712926140
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_11: -6252910195586721932
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_12: -5756069853754852614
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_13: -6925605014065215953
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_14: -78783259849187533
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_2: 7499517638366153295
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_3: -3704584610877504809
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_4: 2821411423619312412
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_5: 1723771930501735884
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_6: 6737231944763678532
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_7: -6772558619491088588
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_8: 6652309262372823421
+      __jet_pack_man_with_weapon_red_helmet_standing_idle_9: 7142129373353023660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

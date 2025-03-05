@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -12,11 +13,17 @@ public class Player : MonoBehaviour
     bool isFly = false;
     bool isGround = true;
     private Animator animator;
-
+    public AudioClip flySound;
+    private AudioSource audioSource;
+    public AudioClip coinSound;
+    public AudioClip zapperSound;
+    public AudioClip zombieSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = gameObject.AddComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -47,6 +54,16 @@ public class Player : MonoBehaviour
         // FlyOn
         if (horizontalInput)
         {
+            if (!isFly)
+            {
+                if (!audioSource.isPlaying || audioSource.time > 0.9f) // Ð?m b?o âm thanh không quá dài
+                {
+                    audioSource.clip = flySound;
+                    audioSource.time = 0; // Reset th?i gian v? 0 ð? phát t? ð?u
+                    audioSource.Play();
+                }
+            }
+
             isFly = true;
             isGround = false;
             transform.Translate(0, flyPower * Time.deltaTime, 0);
@@ -77,9 +94,13 @@ public class Player : MonoBehaviour
             other.transform.position += Vector3.up * 0.5f;
             Destroy(other.gameObject, 0.2f);
             GameManager.Instance.UpdateCoin();
+            audioSource.PlayOneShot(coinSound);
+
         }
         if (other.gameObject.tag == "Obstacle")
         {
+            audioSource.PlayOneShot(zombieSound);
+
             animator.SetBool("IsDead", true);
             GameManager.Instance.StopGame();
         }
