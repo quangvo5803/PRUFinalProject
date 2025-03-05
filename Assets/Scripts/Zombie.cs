@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    public float[] zombieSpeed = { 6f, 7f, 8f };
+    public float[] zombieSpeed = { 1, 1.5f, 2 };
     private float speed;
     private Animator animator;
     private bool isDead = false;
@@ -25,12 +25,8 @@ public class Zombie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.IsBoss || !GameManager.Instance.IsPlaying || isDead)
+        if (!GameManager.Instance.IsPlaying || isDead)
         {
-            if (GameManager.Instance.IsBoss)
-            {
-                DestroyObject();
-            }
             return;
         }
         transform.position = new Vector3(
@@ -62,7 +58,7 @@ public class Zombie : MonoBehaviour
                 animator.SetBool("IsDead", isDead);
 
                 Invoke(nameof(DestroyObject), 1f);
-
+                GameManager.Instance.AddScore(10);
                 // 30% cơ hội xuất hiện SupportItem
                 if (Random.value <= 0.3f)
                 {

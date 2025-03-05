@@ -18,12 +18,12 @@ public class Player : MonoBehaviour
     public AudioClip coinSound;
     public AudioClip zapperSound;
     public AudioClip zombieSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
         audioSource = gameObject.AddComponent<AudioSource>();
-
     }
 
     // Update is called once per frame
@@ -56,10 +56,10 @@ public class Player : MonoBehaviour
         {
             if (!isFly)
             {
-                if (!audioSource.isPlaying || audioSource.time > 0.9f) // Ð?m b?o âm thanh không quá dài
+                if (!audioSource.isPlaying || audioSource.time > 0.9f) // ï¿½?m b?o ï¿½m thanh khï¿½ng quï¿½ dï¿½i
                 {
                     audioSource.clip = flySound;
-                    audioSource.time = 0; // Reset th?i gian v? 0 ð? phát t? ð?u
+                    audioSource.time = 0; // Reset th?i gian v? 0 ï¿½? phï¿½t t? ï¿½?u
                     audioSource.Play();
                 }
             }
@@ -95,7 +95,6 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject, 0.2f);
             GameManager.Instance.UpdateCoin();
             audioSource.PlayOneShot(coinSound);
-
         }
         if (other.gameObject.tag == "Obstacle")
         {

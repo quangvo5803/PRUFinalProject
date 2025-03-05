@@ -457,12 +457,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1720372923}
   coinText: {fileID: 1940958774}
-  background: {fileID: 1875699541}
-  spawnerManager: {fileID: 1214986083}
   loseMenu: {fileID: 1060279276}
+  winMenu: {fileID: 5372392249943666550}
   IsPlaying: 1
   IsPause: 0
   IsBoss: 0
+  playerDamage: 5
+  robotDamage: 3
 --- !u!82 &519420035
 AudioSource:
   m_ObjectHideFlags: 0
@@ -862,17 +863,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1437154292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1214986083 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7560225926593801849, guid: 462edcb29ceef6e4da3935de0ba82c9d, type: 3}
-  m_PrefabInstance: {fileID: 3320261243341662480}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bfc4812a3456f4bb39b09472d6a4be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1295681751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4627180370407364079, guid: 1f24aa79136c4bd4e8660943a65de953, type: 3}
@@ -1306,7 +1296,7 @@ PrefabInstance:
     - target: {fileID: 7560225926593801849, guid: 462edcb29ceef6e4da3935de0ba82c9d, type: 3}
       propertyPath: boss
       value: 
-      objectReference: {fileID: 6273504765761458709, guid: eac271d10c4d58f4c86867c02d624f27, type: 3}
+      objectReference: {fileID: 589922550964540008, guid: 65d589a2908c4c94f9119dd0d921d60b, type: 3}
     - target: {fileID: 7560225926593801849, guid: 462edcb29ceef6e4da3935de0ba82c9d, type: 3}
       propertyPath: rocketSound
       value: 
@@ -1557,6 +1547,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2984442833637952493, guid: c5515d4c9b354a842af0c7016302cc62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 519420034}
+    - target: {fileID: 2984442833637952493, guid: c5515d4c9b354a842af0c7016302cc62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984442833637952493, guid: c5515d4c9b354a842af0c7016302cc62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984442833637952493, guid: c5515d4c9b354a842af0c7016302cc62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3541639447021678507, guid: c5515d4c9b354a842af0c7016302cc62, type: 3}
       propertyPath: m_Name
       value: GamePlayCanvas
@@ -1704,6 +1710,10 @@ PrefabInstance:
     - target: {fileID: 4534297216657358553, guid: c5515d4c9b354a842af0c7016302cc62, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842810115859449631, guid: c5515d4c9b354a842af0c7016302cc62, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5302471403562944104, guid: c5515d4c9b354a842af0c7016302cc62, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1911,6 +1921,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &5372392249943666550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4842810115859449631, guid: c5515d4c9b354a842af0c7016302cc62, type: 3}
+  m_PrefabInstance: {fileID: 5372392249943666547}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6755964566305626323
 PrefabInstance:
   m_ObjectHideFlags: 0

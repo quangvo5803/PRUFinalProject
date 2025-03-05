@@ -1,17 +1,27 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    private int currentHealth = 100;
-    private int hurtHeath = 450;
+    private int currentHealth = 300;
+    private int maxhHeath = 300;
+    private int hurtHeath = 250;
     private bool isHurt = false;
     private bool isAttack = false;
     private bool isWalk = true;
     private Animator animator;
+    public GameObject warningSignPrefab;
+    private GameObject currentWarning;
+
+    public GameObject[] lazer;
+    public Slider healthBar;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        healthBar.maxValue = maxhHeath;
+        healthBar.value = currentHealth;
         animator = GetComponent<Animator>();
         //Lặp lại tấn công sau mỗi 3-10s
         InvokeRepeating("Attack", 0, Random.Range(3f, 10f));
@@ -20,6 +30,20 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.Instance.IsPlaying)
+        {
+            animator.speed = 0;
+            CancelInvoke("Attack"); // Ngừng Attack khi game dừng
+            return;
+        }
+        else
+        {
+            animator.speed = 1;
+            if (!IsInvoking("Attack")) // Nếu Attack chưa được gọi lại, kích hoạt lại
+            {
+                InvokeRepeating("Attack", 0, Random.Range(3f, 10f));
+            }
+        }
         Walk();
     }
 
@@ -27,6 +51,10 @@ public class Boss : MonoBehaviour
     {
         isAttack = true;
         animator.SetBool("IsAttack", isAttack);
+
+        int numLazers = Random.Range(1, 3); // Chọn 1 hoặc 2 laser
+        StartCoroutine(Lazer(numLazers));
+
         Invoke("StopAttack", 1.0f);
     }
 
@@ -66,17 +94,19 @@ public class Boss : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            GameManager.Instance.WiningGame();
             animator.SetBool("IsDead", true);
             Invoke("DestroyObject", 1f);
             return;
         }
         currentHealth -= 10;
+        healthBar.value = currentHealth;
         if (currentHealth <= hurtHeath)
         {
             hurtHeath -= 100;
             isHurt = true;
             animator.SetBool("IsHurt", isHurt);
-            Invoke("StopHurt", 2f);
+            Invoke("StopHurt", 1f);
         }
         isHurt = false;
     }
@@ -89,6 +119,32 @@ public class Boss : MonoBehaviour
 
     void DestroyObject()
     {
+        animator.SetBool("IsDead", false);
         Destroy(this.gameObject);
+    }
+
+    System.Collections.IEnumerator Lazer(int numberLazer)
+    {
+        for (int i = 0; i < numberLazer; i++)
+        {
+            if (!GameManager.Instance.IsPlaying)
+                yield break; //
+            float randomY = Random.Range(-4.7f, 4.7f);
+            Vector3 warningPosition = new Vector3(8f, randomY, 0);
+            currentWarning = Instantiate(warningSignPrefab, warningPosition, Quaternion.identity);
+
+            yield return new WaitForSeconds(1.5f);
+            if (!GameManager.Instance.IsPlaying)
+                yield break; // Dừng coroutine nếu game đang dừng
+            Destroy(currentWarning);
+
+            Vector3 spawnPosition = new Vector3(0, randomY, 0);
+            GameObject laze = Instantiate(
+                lazer[Random.Range(0, 2)],
+                spawnPosition,
+                Quaternion.identity
+            );
+            Destroy(laze, 1f);
+        }
     }
 }

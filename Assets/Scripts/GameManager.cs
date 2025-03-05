@@ -1,3 +1,4 @@
+using System.Linq;
 using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -9,9 +10,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public Text scoreText;
     public Text coinText;
-    public Background background;
-    public SpawnerManager spawnerManager;
     public GameObject loseMenu;
+    public GameObject winMenu;
     public bool IsPlaying = true;
     public bool IsPause = false;
     public bool IsBoss = false;
@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        IsBoss = false;
         UpdateUI();
     }
 
@@ -59,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScore()
     {
-        if (currentScore >= 100)
+        if (currentScore >= 10)
         {
             IsBoss = true;
             return;
@@ -70,6 +71,11 @@ public class GameManager : MonoBehaviour
             currentScore += multiScore;
             accumulatedTime = 0;
         }
+    }
+
+    public void AddScore(int score)
+    {
+        currentScore += score;
     }
 
     private void UpdateUI()
@@ -92,10 +98,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("Pause Game");
     }
 
+    [System.Obsolete]
     public void ResumeGame()
     {
         IsPlaying = true;
         IsPause = false;
+        RobotShooting robot = FindObjectsOfType<RobotShooting>().First();
+        robot.StartShooting();
     }
 
     public void StopGame()
@@ -117,8 +126,11 @@ public class GameManager : MonoBehaviour
 
     public void WiningGame()
     {
+        winMenu.SetActive(true);
         UnlockNextLevel();
         totalCoin += currentCoin;
+        PlayerPrefs.SetInt("TotalsCoin", totalCoin);
+        PlayerPrefs.Save();
     }
 
     public void UnlockNextLevel()
@@ -133,13 +145,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void NextLevel()
+    {
+        int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextLevel < SceneManager.sceneCountInBuildSettings) // Kiểm tra nếu level tiếp theo hợp lệ
+        {
+            SceneManager.LoadScene(nextLevel);
+        }
+        else
+        {
+            BackToHome();
+        }
+    }
+
     private void SaveBestScore()
     {
         double bestScore = PlayerPrefs.GetFloat("BestScore", 0);
 
         if (currentScore > bestScore)
         {
-            PlayerPrefs.SetFloat("BestScore", (float)currentScore);
+            PlayerPrefs.SetInt("BestScore", currentScore);
             PlayerPrefs.Save();
         }
     }
