@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Bullet
   - SupportItem
+  - RobotBullet
   layers:
   - Default
   - TransparentFX
