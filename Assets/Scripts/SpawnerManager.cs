@@ -32,6 +32,10 @@ public class SpawnerManager : MonoBehaviour
     public GameObject boss;
     private int bossCount = 0;
 
+    // Spawning Support Item
+    public GameObject[] supportItemPrefabs;
+    public Transform[] supportItemSpawnPositions;
+
     // Spawning Rocket
     public GameObject rocketPrefab;
     public GameObject warningSignPrefab; // Dấu ch?m than c?nh báo
@@ -43,6 +47,7 @@ public class SpawnerManager : MonoBehaviour
     private float maxY = 4.7f;
     private GameObject currentWarning;
     private AudioSource warningAudioSource;
+
     void Start()
     {
         spawnTimeCoin = startTimeCoin;
@@ -205,6 +210,7 @@ public class SpawnerManager : MonoBehaviour
             }
         }
     }
+
     System.Collections.IEnumerator ShowRocketWarning()
     {
         float randomY = Random.Range(minY, maxY);
@@ -226,5 +232,19 @@ public class SpawnerManager : MonoBehaviour
 
         AudioSource.PlayClipAtPoint(rocketSound, spawnPosition);
     }
+
     // QuangVV - 2025/02/12 - Create a method to spawn coins - End
+
+    // Thang - 04/03/2025 - Create method to spawn support item
+    void SpawnSupportItem()
+    {
+        int randomIndex = Random.Range(0, supportItemPrefabs.Length);
+        int randomPosition = Random.Range(0, supportItemSpawnPositions.Length);
+        Instantiate(
+            supportItemPrefabs[randomIndex],
+            supportItemSpawnPositions[randomPosition].position,
+            Quaternion.identity
+        );
+    }
+    // End ------
 }
