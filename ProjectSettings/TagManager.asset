@@ -7,7 +7,9 @@ TagManager:
   - Coin
   - Obstacle
   - Bullet
-  - SupportItem
+  - Magnet
+  - SpeedBoost
+  - ExtraLife
   layers:
   - Default
   - TransparentFX
