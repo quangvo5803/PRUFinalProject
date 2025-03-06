@@ -6,11 +6,9 @@ public class Zombie : MonoBehaviour
     private float speed;
     private Animator animator;
     private bool isDead = false;
-
-    public int health = 2;
-
-  
     public GameObject[] supportItems;
+
+    private int health = 30;
 
     void Start()
     {
@@ -48,27 +46,28 @@ public class Zombie : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Bullet")
+        if (other.CompareTag("Bullet") || other.CompareTag("RobotBullet"))
         {
+            //Trừ máu tùy vào đạn
+            health -= other.CompareTag("Bullet")
+                ? GameManager.Instance.playerDamage
+                : GameManager.Instance.robotDamage;
+            //Hủy viên đạn
             Destroy(other.gameObject);
-            TakeDamage(1);
-        }
-    }
 
-    void TakeDamage(int damage)
-    {
-        health -= damage;
-
-        if (health <= 0 && !isDead)
-        {
-            isDead = true;
-            gameObject.GetComponent<Collider2D>().enabled = false;
-            animator.SetBool("IsDead", true);
-            Invoke("DestroyObject", 1f);
-
-            if (Random.value <= 0.5f)
+            if (health <= 0)
             {
-                Invoke("SpawnSupportItem", 1f);
+                GetComponent<Collider2D>().enabled = false;
+                isDead = true;
+                animator.SetBool("IsDead", isDead);
+
+                Invoke(nameof(DestroyObject), 1f);
+
+                // 30% cơ hội xuất hiện SupportItem
+                if (Random.value <= 0.3f)
+                {
+                    Invoke(nameof(SpawnSupportItem), 1f);
+                }
             }
         }
     }

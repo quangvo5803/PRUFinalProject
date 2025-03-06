@@ -10,6 +10,8 @@ TagManager:
   - Magnet
   - SpeedBoost
   - ExtraLife
+  - SupportItem
+  - RobotBullet
   layers:
   - Default
   - TransparentFX
@@ -79,6 +81,18 @@ TagManager:
     locked: 0
   - name: SupportItem
     uniqueID: 1042688313
+    locked: 0
+  - name: Rocket
+    uniqueID: 136384765
+    locked: 0
+  - name: Warning
+    uniqueID: 3562169189
+    locked: 0
+  - name: Robot
+    uniqueID: 2425621475
+    locked: 0
+  - name: Lazer
+    uniqueID: 4003034195
     locked: 0
   m_RenderingLayers:
   - Default
