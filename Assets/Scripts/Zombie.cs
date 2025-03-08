@@ -1,14 +1,15 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    public float[] zombieSpeed = { 6f, 7f, 8f };
+    public float[] zombieSpeed = { 3, 4, 5 };
     private float speed;
     private Animator animator;
     private bool isDead = false;
-    public GameObject supportItem;
+    public GameObject[] supportItems;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private int health = 30;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -20,22 +21,19 @@ public class Zombie : MonoBehaviour
         speed = zombieSpeed[Random.Range(0, zombieSpeed.Length)];
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.IsBoss || !GameManager.Instance.IsPlaying || isDead)
+        if (!GameManager.Instance.IsPlaying || isDead)
         {
-            if (GameManager.Instance.IsBoss)
-            {
-                DestroyObject();
-            }
             return;
         }
+
         transform.position = new Vector3(
             transform.position.x - speed * Time.deltaTime,
             transform.position.y,
             transform.position.z
         );
+
         if (transform.position.x < -30)
         {
             DestroyObject();
@@ -44,19 +42,28 @@ public class Zombie : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Bullet")
+        if (other.CompareTag("Bullet") || other.CompareTag("RobotBullet"))
         {
-            //Vô hiệu hóa collider để không nhận đạn
-            gameObject.GetComponent<Collider2D>().enabled = false;
-            isDead = true;
-            //Chạy animation và hủy zombie sau 1s
+            //Trừ máu tùy vào đạn
+            health -= other.CompareTag("Bullet")
+                ? GameManager.Instance.playerDamage
+                : GameManager.Instance.robotDamage;
+            //Hủy viên đạn
             Destroy(other.gameObject);
-            animator.SetBool("IsDead", isDead);
-            Invoke("DestroyObject", 1f);
-            // Xác suất 50% xuất hiện supportItem
-            if (Random.value <= 0.5f)
+
+            if (health <= 0)
             {
-                Invoke("SpawnSupportItem", 1f);
+                GetComponent<Collider2D>().enabled = false;
+                isDead = true;
+                animator.SetBool("IsDead", isDead);
+
+                Invoke(nameof(DestroyObject), 1f);
+                GameManager.Instance.AddScore(10);
+                // 30% cơ hội xuất hiện SupportItem
+                if (Random.value <= 0.3f)
+                {
+                    Invoke(nameof(SpawnSupportItem), 1f);
+                }
             }
         }
     }
@@ -68,9 +75,10 @@ public class Zombie : MonoBehaviour
 
     void SpawnSupportItem()
     {
-        if (supportItem != null)
+        if (supportItems.Length > 0)
         {
-            Instantiate(supportItem, transform.position, Quaternion.identity);
+            int randomIndex = Random.Range(0, supportItems.Length);
+            Instantiate(supportItems[randomIndex], transform.position, Quaternion.identity);
         }
     }
 }

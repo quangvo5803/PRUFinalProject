@@ -199,7 +199,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombieSpeed:
+  - 3
   - 4
   - 5
-  - 6
-  supportItem: {fileID: 2428340690661455628, guid: 371b3ecbeb069f449b9ecffe4a1cac2b, type: 3}
+  supportItems:
+  - {fileID: 6425001384033278126, guid: feaccc0735db3644c95aaf86c4654226, type: 3}
+  - {fileID: 2428340690661455628, guid: 371b3ecbeb069f449b9ecffe4a1cac2b, type: 3}
+  - {fileID: 3769158117807870646, guid: 75cd2c1bf02f1ec4c981a890c0f97471, type: 3}

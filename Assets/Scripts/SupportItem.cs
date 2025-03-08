@@ -1,7 +1,9 @@
 using UnityEngine;
 
+public enum SupportItemType { Magnet, SpeedBoost, ExtraLife }
 public class SupportItem : MonoBehaviour
 {
+    public SupportItemType itemType;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() { }
 
