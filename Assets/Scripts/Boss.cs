@@ -104,7 +104,6 @@ public class Boss : MonoBehaviour
             return;
         }
         currentHealth -= damage;
-        Debug.Log(damage);
         healthBar.value = currentHealth;
         if (currentHealth <= hurtHeath)
         {

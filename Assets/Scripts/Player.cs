@@ -244,7 +244,6 @@ public class Player : MonoBehaviour
     {
         if (robotPrefab != null)
         {
-            Debug.Log("Robot");
             robotInstance = Instantiate(
                 robotPrefab,
                 transform.position + new Vector3(-1.2f, 0.5f, 0),

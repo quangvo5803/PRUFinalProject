@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScore()
     {
-        if (currentScore >= 100000000)
+        if (currentScore >= 3000)
         {
             IsBoss = true;
             return;
@@ -107,7 +107,6 @@ public class GameManager : MonoBehaviour
     {
         IsPlaying = false;
         IsPause = true;
-        Debug.Log("Pause Game");
     }
 
     [System.Obsolete]

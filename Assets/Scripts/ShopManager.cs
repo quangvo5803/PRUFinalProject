@@ -113,5 +113,6 @@ public class ShopManager : MonoBehaviour
         PlayerPrefs.DeleteKey("PlayerLevel");
         PlayerPrefs.DeleteKey("RobotLevel");
         PlayerPrefs.DeleteKey("IsRobot");
+        PlayerPrefs.DeleteKey("UnlockedLevel");
     }
 }
