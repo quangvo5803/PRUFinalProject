@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    private int currentHealth = 300;
-    private int maxhHeath = 300;
-    private int hurtHeath = 250;
+    private int currentHealth = 100;
+    private int maxhHeath = 100;
+    private int hurtHeath = 80;
     private bool isHurt = false;
     private bool isAttack = false;
     private bool isWalk = true;
@@ -83,14 +83,18 @@ public class Boss : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Bullet")
+        if (other.gameObject.tag == "Bullet" || other.gameObject.tag == "RobotBullet")
         {
             Destroy(other.gameObject);
-            Hurt();
+            Hurt(
+                other.gameObject.tag == "Bullet"
+                    ? GameManager.Instance.playerDamage
+                    : GameManager.Instance.robotDamage
+            );
         }
     }
 
-    void Hurt()
+    void Hurt(int damage)
     {
         if (currentHealth <= 0)
         {
@@ -99,11 +103,12 @@ public class Boss : MonoBehaviour
             Invoke("DestroyObject", 1f);
             return;
         }
-        currentHealth -= 10;
+        currentHealth -= damage;
+        Debug.Log(damage);
         healthBar.value = currentHealth;
         if (currentHealth <= hurtHeath)
         {
-            hurtHeath -= 100;
+            hurtHeath -= 20;
             isHurt = true;
             animator.SetBool("IsHurt", isHurt);
             Invoke("StopHurt", 1f);

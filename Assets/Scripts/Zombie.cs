@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    public float[] zombieSpeed = { 1, 1.5f, 2 };
+    public float[] zombieSpeed = { 3, 4, 5 };
     private float speed;
     private Animator animator;
     private bool isDead = false;

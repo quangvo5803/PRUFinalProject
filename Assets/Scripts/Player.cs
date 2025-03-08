@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     float fallPower = 4.5f;
     bool isFly = false;
     bool isGround = true;
+    private Collider2D playerCollider;
+    public GameObject robotPrefab;
+    private GameObject robotInstance;
     private Animator animator;
     public AudioClip flySound;
     private AudioSource audioSource;
@@ -22,8 +25,14 @@ public class Player : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerCollider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
         audioSource = gameObject.AddComponent<AudioSource>();
+
+        if (PlayerPrefs.GetInt("IsRobot", 0) == 1)
+        {
+            SpawnRobot();
+        }
     }
 
     // Update is called once per frame
@@ -45,10 +54,12 @@ public class Player : MonoBehaviour
         if (GameManager.Instance.IsPlaying)
         {
             horizontalInput = Input.GetKey(KeyCode.Space);
+            playerCollider.enabled = true;
             Shooting();
         }
         else
         {
+            playerCollider.enabled = false;
             horizontalInput = false;
         }
         // FlyOn
@@ -119,6 +130,20 @@ public class Player : MonoBehaviour
                 transform.position.z
             );
             Instantiate(bullet, bulletPostion, Quaternion.identity);
+        }
+    }
+
+    void SpawnRobot()
+    {
+        if (robotPrefab != null)
+        {
+            Debug.Log("Robot");
+            robotInstance = Instantiate(
+                robotPrefab,
+                transform.position + new Vector3(-1.2f, 0.5f, 0),
+                Quaternion.identity
+            );
+            robotInstance.transform.parent = transform;
         }
     }
 }

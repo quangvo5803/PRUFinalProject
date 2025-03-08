@@ -19,9 +19,14 @@ public class GameManager : MonoBehaviour
     private int currentScore = 0;
     private double accumulatedTime = 0;
     private int currentCoin = 0;
-    private int totalCoin = 0;
-    public int playerDamage = 5;
-    public int robotDamage = 3;
+    private int totalCoin;
+    public int playerDamage;
+    public int robotDamage;
+    public int playerLevel;
+    public int robotLevel;
+
+    public int playerDamagePrice;
+    public int robotDamagePrice;
 
     private void Awake()
     {
@@ -38,6 +43,13 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        totalCoin = PlayerPrefs.GetInt("TotalsCoin", 0);
+        playerLevel = PlayerPrefs.GetInt("PlayerLevel", 1);
+        robotLevel = PlayerPrefs.GetInt("RobotLevel", 1);
+
+        //Tính toán damage dựa theo level
+        playerDamage = 5 + (playerLevel - 1) * 3;
+        robotDamage = 3 + (robotLevel - 1) * 2;
         IsBoss = false;
         UpdateUI();
     }
@@ -60,7 +72,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScore()
     {
-        if (currentScore >= 10)
+        if (currentScore >= 100000000)
         {
             IsBoss = true;
             return;
@@ -112,6 +124,7 @@ public class GameManager : MonoBehaviour
         IsPlaying = false;
         totalCoin += currentCoin;
         SaveBestScore();
+        PlayerPrefs.SetInt("TotalsCoin", totalCoin);
         currentCoin = 0;
         currentScore = 0;
         loseMenu.SetActive(true);
@@ -127,6 +140,7 @@ public class GameManager : MonoBehaviour
     public void WiningGame()
     {
         winMenu.SetActive(true);
+        IsPlaying = false;
         UnlockNextLevel();
         totalCoin += currentCoin;
         PlayerPrefs.SetInt("TotalsCoin", totalCoin);
@@ -135,11 +149,10 @@ public class GameManager : MonoBehaviour
 
     public void UnlockNextLevel()
     {
-        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedLevel", 1))
+        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("UnlockedLevel", 1))
         {
             int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
             PlayerPrefs.SetInt("UnlockedLevel", nextLevel);
-            PlayerPrefs.SetInt("ReachedLevel", nextLevel);
             PlayerPrefs.Save();
             multiScore += 5;
         }
