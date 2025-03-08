@@ -7,6 +7,9 @@ TagManager:
   - Coin
   - Obstacle
   - Bullet
+  - Magnet
+  - SpeedBoost
+  - ExtraLife
   - SupportItem
   - RobotBullet
   layers:

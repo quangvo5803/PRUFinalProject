@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
@@ -6,11 +6,10 @@ public class Zombie : MonoBehaviour
     private float speed;
     private Animator animator;
     private bool isDead = false;
-    public GameObject supportItem;
+    public GameObject[] supportItems;
 
     private int health = 30;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -22,18 +21,19 @@ public class Zombie : MonoBehaviour
         speed = zombieSpeed[Random.Range(0, zombieSpeed.Length)];
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!GameManager.Instance.IsPlaying || isDead)
         {
             return;
         }
+
         transform.position = new Vector3(
             transform.position.x - speed * Time.deltaTime,
             transform.position.y,
             transform.position.z
         );
+
         if (transform.position.x < -30)
         {
             DestroyObject();
@@ -75,9 +75,10 @@ public class Zombie : MonoBehaviour
 
     void SpawnSupportItem()
     {
-        if (supportItem != null)
+        if (supportItems.Length > 0)
         {
-            Instantiate(supportItem, transform.position, Quaternion.identity);
+            int randomIndex = Random.Range(0, supportItems.Length);
+            Instantiate(supportItems[randomIndex], transform.position, Quaternion.identity);
         }
     }
 }
