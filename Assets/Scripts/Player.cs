@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
     float fallPower = 4.5f;
     bool isFly = false;
     bool isGround = true;
+    private Collider2D playerCollider;
+    public GameObject robotPrefab;
+    private GameObject robotInstance;
 
     // Magnet Power-up
     public static bool isMagnetActive = false;
@@ -28,19 +31,24 @@ public class Player : MonoBehaviour
     private int maxLives = 3;
     private int currentLives = 1;
 
-
     private Animator animator;
     public AudioClip flySound;
     private AudioSource audioSource;
     public AudioClip coinSound;
     public AudioClip zapperSound;
     public AudioClip zombieSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerCollider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
         audioSource = gameObject.AddComponent<AudioSource>();
 
+        if (PlayerPrefs.GetInt("IsRobot", 0) == 1)
+        {
+            SpawnRobot();
+        }
     }
 
     // Update is called once per frame
@@ -62,10 +70,12 @@ public class Player : MonoBehaviour
         if (GameManager.Instance.IsPlaying)
         {
             horizontalInput = Input.GetKey(KeyCode.Space);
+            playerCollider.enabled = true;
             Shooting();
         }
         else
         {
+            playerCollider.enabled = false;
             horizontalInput = false;
         }
         // FlyOn
@@ -73,10 +83,10 @@ public class Player : MonoBehaviour
         {
             if (!isFly)
             {
-                if (!audioSource.isPlaying || audioSource.time > 0.9f) // Ð?m b?o âm thanh không quá dài
+                if (!audioSource.isPlaying || audioSource.time > 0.9f) // ï¿½?m b?o ï¿½m thanh khï¿½ng quï¿½ dï¿½i
                 {
                     audioSource.clip = flySound;
-                    audioSource.time = 0; // Reset th?i gian v? 0 ð? phát t? ð?u
+                    audioSource.time = 0; // Reset th?i gian v? 0 ï¿½? phï¿½t t? ï¿½?u
                     audioSource.Play();
                 }
             }
@@ -114,7 +124,6 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject, 0.2f);
             GameManager.Instance.UpdateCoin();
             audioSource.PlayOneShot(coinSound);
-
         }
         if (other.gameObject.tag == "Obstacle")
         {
@@ -123,7 +132,11 @@ public class Player : MonoBehaviour
             animator.SetBool("IsDead", true);
             GameManager.Instance.StopGame();
         }
-        if (other.CompareTag("Magnet") || other.CompareTag("SpeedBoost") || other.CompareTag("ExtraLife"))
+        if (
+            other.CompareTag("Magnet")
+            || other.CompareTag("SpeedBoost")
+            || other.CompareTag("ExtraLife")
+        )
         {
             if (other.CompareTag("Magnet"))
             {
@@ -141,6 +154,7 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
     public void ActivateMagnet()
     {
         isMagnetActive = true;
@@ -174,12 +188,10 @@ public class Player : MonoBehaviour
             collider.enabled = true;
         }
 
-
         Background.Instance.SetSpeedMultiplier(1f);
 
         isSpeedBoostActive = false;
     }
-
 
     void IncreaseLife()
     {
@@ -207,7 +219,11 @@ public class Player : MonoBehaviour
         GameObject[] golds = GameObject.FindGameObjectsWithTag("Coin");
         foreach (GameObject gold in golds)
         {
-            gold.transform.position = Vector3.MoveTowards(gold.transform.position, transform.position, 7f * Time.deltaTime);
+            gold.transform.position = Vector3.MoveTowards(
+                gold.transform.position,
+                transform.position,
+                7f * Time.deltaTime
+            );
         }
     }
 
@@ -221,6 +237,19 @@ public class Player : MonoBehaviour
                 transform.position.z
             );
             Instantiate(bullet, bulletPostion, Quaternion.identity);
+        }
+    }
+
+    void SpawnRobot()
+    {
+        if (robotPrefab != null)
+        {
+            robotInstance = Instantiate(
+                robotPrefab,
+                transform.position + new Vector3(-1.2f, 0.5f, 0),
+                Quaternion.identity
+            );
+            robotInstance.transform.parent = transform;
         }
     }
 }
