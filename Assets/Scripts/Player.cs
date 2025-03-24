@@ -232,7 +232,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 bulletPostion = new Vector3(
-                -3.4f,
+                -4.4f,
                 transform.position.y - 0.05f,
                 transform.position.z
             );

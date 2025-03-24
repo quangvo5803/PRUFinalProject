@@ -26,7 +26,7 @@ public class ShopManager : MonoBehaviour
 
     public void Start()
     {
-        totalCoin = PlayerPrefs.GetInt("TotalsCoin", 0);
+        totalCoin = PlayerPrefs.GetInt("TotalsCoin", 500);
         playerLevel = PlayerPrefs.GetInt("PlayerLevel", 1);
         robotLevel = PlayerPrefs.GetInt("RobotLevel", 1);
         isRobot = PlayerPrefs.GetInt("IsRobot", 0) == 1;
@@ -114,5 +114,7 @@ public class ShopManager : MonoBehaviour
         PlayerPrefs.DeleteKey("RobotLevel");
         PlayerPrefs.DeleteKey("IsRobot");
         PlayerPrefs.DeleteKey("UnlockedLevel");
+        PlayerPrefs.DeleteKey("TotalsCoin");
+        PlayerPrefs.Save();
     }
 }

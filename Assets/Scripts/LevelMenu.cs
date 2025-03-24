@@ -21,6 +21,8 @@ public class LevelMenu : MonoBehaviour
 
     public void LoadLevel(int level)
     {
-        SceneManager.LoadScene(level);
+        PlayerPrefs.SetInt("SelectedLevel", level); // Lýu level ð? ch?n
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("ChoosePlayer"); // Chuy?n ð?n scene ch?n nhân v?t
     }
 }

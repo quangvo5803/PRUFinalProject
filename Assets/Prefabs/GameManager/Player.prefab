@@ -236,4 +236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704bd4915ca52514b84a8eb145784660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
   currentScoreText: {fileID: 0}
+  robotPrefab: {fileID: 0}
+  flySound: {fileID: 0}
+  coinSound: {fileID: 0}
+  zapperSound: {fileID: 0}
+  zombieSound: {fileID: 0}
