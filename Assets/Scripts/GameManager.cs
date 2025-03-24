@@ -28,6 +28,16 @@ public class GameManager : MonoBehaviour
     public int playerDamagePrice;
     public int robotDamagePrice;
 
+    public GameObject character1Prefab; // Prefab của nhân vật 1
+    public GameObject character2Prefab; // Prefab của nhân vật 2
+    public Transform spawnPoint; // Vị trí spawn nhân vật trong scene
+    private GameObject currentCharacter;
+    public GameObject bulletPrefab; // Đạn của nhân vật
+    public GameObject robotPrefab; // Prefab của robot
+    public AudioClip flySound; // Âm thanh bay
+    public AudioClip coinSound; // Âm thanh coin
+    public AudioClip zapperSound; // Âm thanh zapper
+    public AudioClip zombieSound;
     private void Awake()
     {
         // Đảm bảo chỉ có một thể hiện duy nhất của GameManager
@@ -51,6 +61,7 @@ public class GameManager : MonoBehaviour
         playerDamage = 5 + (playerLevel - 1) * 3;
         robotDamage = 3 + (robotLevel - 1) * 2;
         IsBoss = false;
+        SpawnCharacter();
         UpdateUI();
     }
 
@@ -64,7 +75,29 @@ public class GameManager : MonoBehaviour
         UpdateScore();
         UpdateUI();
     }
-
+    private void SpawnCharacter()
+    {
+        string selectedCharacter = CharacterSelection.selectedCharacter; // Lấy từ script chọn nhân vật
+        if (selectedCharacter == "Character1")
+        {
+            currentCharacter = Instantiate(character1Prefab, spawnPoint.position, Quaternion.identity);
+        }
+        else if (selectedCharacter == "Character2")
+        {
+            currentCharacter = Instantiate(character2Prefab, spawnPoint.position, Quaternion.identity);
+        }
+        Player playerScript = currentCharacter.GetComponent<Player>();
+        if (playerScript != null)
+        {
+            playerScript.bullet = bulletPrefab; // Gán đạn
+            playerScript.currentScoreText = scoreText; // Gán Text hiển thị điểm
+            playerScript.robotPrefab = robotPrefab; // Gán Prefab robot
+            playerScript.flySound = flySound; // Gán âm thanh bay
+            playerScript.coinSound = coinSound; // Gán âm thanh coin
+            playerScript.zapperSound = zapperSound; // Gán âm thanh zapper
+            playerScript.zombieSound = zombieSound; // Gán âm thanh zombie
+        }
+    }
     public void UpdateCoin()
     {
         currentCoin++;
