@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|d:\\workspace\\unty\\pru_final\\prufinalproject\\assets\\scripts\\levelmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|d:\\workspace\\unty\\pru_final\\prufinalproject\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|d:\\workspace\\unty\\pru_final\\prufinalproject\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\assets\\scripts\\rocketmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LevelMenu.cs",
               "DocumentMoniker": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\LevelMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LevelMenu.cs",
@@ -59,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
@@ -67,8 +67,7 @@
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
               "ViewState": "AgIAALAAAAAAAAAAAAAiwNcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T14:00:35.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T14:00:35.739Z"
             },
             {
               "$type": "Document",
@@ -120,13 +119,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
               "ToolTip": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAN8AAAAAAAAAAAAYwOoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T15:37:43.183Z",
               "EditorCaption": ""

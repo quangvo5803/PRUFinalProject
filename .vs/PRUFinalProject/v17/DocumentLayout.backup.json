@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|d:\\workspace\\unty\\pru_final\\prufinalproject\\assets\\scripts\\levelmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|d:\\workspace\\unty\\pru_final\\prufinalproject\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|d:\\workspace\\unty\\pru_final\\prufinalproject\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95B03B23-9FE1-79C1-1E74-A8139F84E19B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,11 +42,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "LevelMenu.cs",
+              "DocumentMoniker": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\LevelMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelMenu.cs",
+              "ToolTip": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\LevelMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LevelMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T14:02:32.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAiwNcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T14:00:35.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CoinMap.cs",
               "DocumentMoniker": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\CoinMap.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CoinMap.cs",
@@ -50,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Bullet.cs",
               "DocumentMoniker": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
@@ -62,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "RobotShooting.cs",
               "DocumentMoniker": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\RobotShooting.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RobotShooting.cs",
@@ -74,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "RocketMovement.cs",
               "DocumentMoniker": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\RocketMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RocketMovement.cs",
@@ -86,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Player.cs",
               "DocumentMoniker": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
@@ -99,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "SpawnerManager.cs",
               "DocumentMoniker": "D:\\Workspace\\Unty\\Pru_Final\\PRUFinalProject\\Assets\\Scripts\\SpawnerManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnerManager.cs",
