@@ -81,8 +81,10 @@ public class ShopManager : MonoBehaviour
         if (totalCoin > 300)
         {
             isRobot = true;
+            totalCoin -= 300;
             // Lưu trạng thái đã mua robot
             PlayerPrefs.SetInt("IsRobot", 1);
+            PlayerPrefs.SetInt("TotalsCoin", totalCoin);
             PlayerPrefs.Save();
             UpdateUI();
         }

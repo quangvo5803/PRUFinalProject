@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     public Transform spawnPoint; // Vị trí spawn nhân vật trong scene
     private GameObject currentCharacter;
     public GameObject bulletPrefab; // Đạn của nhân vật
-    private GameObject robotPrefab; // Prefab của robot
+    public GameObject robotPrefab; // Prefab của robot
     public AudioClip flySound; // Âm thanh bay
     public AudioClip coinSound; // Âm thanh coin
     public AudioClip zapperSound; // Âm thanh zapper
@@ -101,10 +101,6 @@ public class GameManager : MonoBehaviour
         Player playerScript = currentCharacter.GetComponent<Player>();
         if (playerScript != null)
         {
-            if (PlayerPrefs.GetInt("IsRobot", 0) == 1)
-            {
-                SpawnRobot();
-            }
             playerScript.bullet = bulletPrefab;
             playerScript.currentScoreText = scoreText;
             playerScript.flySound = flySound;
@@ -231,19 +227,6 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("BestScore", currentScore);
             PlayerPrefs.Save();
-        }
-    }
-
-    void SpawnRobot()
-    {
-        if (robotPrefab != null)
-        {
-            robotInstance = Instantiate(
-                robotPrefab,
-                transform.position + new Vector3(-1.2f, 0.5f, 0),
-                Quaternion.identity
-            );
-            robotInstance.transform.parent = transform;
         }
     }
 }

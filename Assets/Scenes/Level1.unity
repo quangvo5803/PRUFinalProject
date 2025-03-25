@@ -575,6 +575,7 @@ MonoBehaviour:
   character2Prefab: {fileID: 970765988078874432, guid: 44b2bdfebafe56641afc85269f4ec8d7, type: 3}
   spawnPoint: {fileID: 696059831}
   bulletPrefab: {fileID: 3541656667264453290, guid: 1cdbcc6b251f302459893f8ef8a454a7, type: 3}
+  robotPrefab: {fileID: 802090724692516128, guid: 171afb7f13314f54fa66626077b85495, type: 3}
   flySound: {fileID: 8300000, guid: ae038c1c8415d214e9c6bfcd0ff2d008, type: 3}
   coinSound: {fileID: 8300000, guid: c96e3ce10128b8240ad1e8e46db1142c, type: 3}
   zapperSound: {fileID: 8300000, guid: b57afb0522f736f4eba00fe2622f95f0, type: 3}
