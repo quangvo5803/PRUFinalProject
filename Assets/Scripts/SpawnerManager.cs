@@ -136,7 +136,7 @@ public class SpawnerManager : MonoBehaviour
     // QuangVV - 2025/02/12 - Create a method to spawn coins - End
 
     // ThangDCS - 2025/02/12 - Create a method to spawn zombies - Start
-    void SpawnZombie()
+    public void SpawnZombie()
     {
         int numberOfZombies = Random.Range(1, 5);
         List<int> availableIndexes = new List<int>();
@@ -213,6 +213,8 @@ public class SpawnerManager : MonoBehaviour
 
     System.Collections.IEnumerator ShowRocketWarning()
     {
+        if (!GameManager.Instance.IsPlaying || GameManager.Instance.IsBoss)
+            yield break; //
         float randomY = Random.Range(minY, maxY);
         Vector3 warningPosition = new Vector3(8f, randomY, 0);
         currentWarning = Instantiate(warningSignPrefab, warningPosition, Quaternion.identity);
@@ -223,7 +225,8 @@ public class SpawnerManager : MonoBehaviour
         warningAudioSource.Play();
 
         yield return new WaitForSeconds(1.5f);
-
+        if (!GameManager.Instance.IsPlaying || GameManager.Instance.IsBoss)
+            yield break; // Dừng coroutine nếu game đang dừng
         Destroy(currentWarning);
         warningAudioSource.Stop();
 

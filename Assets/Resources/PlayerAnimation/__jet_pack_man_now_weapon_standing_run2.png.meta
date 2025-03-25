@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 439b29c25d5904f40b66077e648d8397
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5817383734552967764
+    second: __jet_pack_man_now_weapon_standing_run_0
+  - first:
+      213: 6517665606011818009
+    second: __jet_pack_man_now_weapon_standing_run_1
+  - first:
+      213: 571543701508522690
+    second: __jet_pack_man_now_weapon_standing_run_2
+  - first:
+      213: -5572424037187372356
+    second: __jet_pack_man_now_weapon_standing_run_3
+  - first:
+      213: 4828698724991946296
+    second: __jet_pack_man_now_weapon_standing_run_4
+  - first:
+      213: 954509651378998105
+    second: __jet_pack_man_now_weapon_standing_run_5
+  - first:
+      213: 7194098970441961423
+    second: __jet_pack_man_now_weapon_standing_run_6
+  - first:
+      213: -1022890280153389519
+    second: __jet_pack_man_now_weapon_standing_run_7
+  - first:
+      213: -7827114236611412823
+    second: __jet_pack_man_now_weapon_standing_run_8
+  - first:
+      213: -9021609749304940376
+    second: __jet_pack_man_now_weapon_standing_run_9
+  - first:
+      213: -7391942327519092439
+    second: __jet_pack_man_now_weapon_standing_run_10
+  - first:
+      213: 4235015231251185977
+    second: __jet_pack_man_now_weapon_standing_run_11
+  - first:
+      213: 2107998615155815209
+    second: __jet_pack_man_now_weapon_standing_run_12
+  - first:
+      213: -3975733833592389053
+    second: __jet_pack_man_now_weapon_standing_run_13
+  - first:
+      213: -8081276904803500326
+    second: __jet_pack_man_now_weapon_standing_run_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_0
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1281
+        width: 312
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5c5d3b050844fa0800000000000000
+      internalID: -5817383734552967764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_1
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1258
+        width: 284
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9109d1b2656637a50800000000000000
+      internalID: 6517665606011818009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_2
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1261
+        width: 276
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c20706e7f78ee700800000000000000
+      internalID: 571543701508522690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_3
+      rect:
+        serializedVersion: 2
+        x: 2357
+        y: 1247
+        width: 276
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba3995bcd5caa2b0800000000000000
+      internalID: -5572424037187372356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_4
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 1254
+        width: 298
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ec68628ebf20340800000000000000
+      internalID: 4828698724991946296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_5
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 662
+        width: 318
+        height: 525
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b802188791f3d00800000000000000
+      internalID: 954509651378998105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_6
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 686
+        width: 339
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf423cc5e296d360800000000000000
+      internalID: 7194098970441961423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_7
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 703
+        width: 365
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 136e14fa5b6fdc1f0800000000000000
+      internalID: -1022890280153389519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_8
+      rect:
+        serializedVersion: 2
+        x: 2274
+        y: 693
+        width: 362
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9acbf565211806390800000000000000
+      internalID: -7827114236611412823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_9
+      rect:
+        serializedVersion: 2
+        x: 2982
+        y: 669
+        width: 346
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a86a764bbdccc280800000000000000
+      internalID: -9021609749304940376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_10
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 59
+        width: 325
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921ec080e9b8a6990800000000000000
+      internalID: -7391942327519092439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_11
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 61
+        width: 280
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931881d2aebc5ca30800000000000000
+      internalID: 4235015231251185977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_12
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 61
+        width: 275
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923b063629d114d10800000000000000
+      internalID: 2107998615155815209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_13
+      rect:
+        serializedVersion: 2
+        x: 2356
+        y: 61
+        width: 276
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3424937842b53d8c0800000000000000
+      internalID: -3975733833592389053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_standing_run_14
+      rect:
+        serializedVersion: 2
+        x: 3024
+        y: 88
+        width: 300
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade7e95b87989df80800000000000000
+      internalID: -8081276904803500326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      __jet_pack_man_now_weapon_standing_run_0: -5817383734552967764
+      __jet_pack_man_now_weapon_standing_run_1: 6517665606011818009
+      __jet_pack_man_now_weapon_standing_run_10: -7391942327519092439
+      __jet_pack_man_now_weapon_standing_run_11: 4235015231251185977
+      __jet_pack_man_now_weapon_standing_run_12: 2107998615155815209
+      __jet_pack_man_now_weapon_standing_run_13: -3975733833592389053
+      __jet_pack_man_now_weapon_standing_run_14: -8081276904803500326
+      __jet_pack_man_now_weapon_standing_run_2: 571543701508522690
+      __jet_pack_man_now_weapon_standing_run_3: -5572424037187372356
+      __jet_pack_man_now_weapon_standing_run_4: 4828698724991946296
+      __jet_pack_man_now_weapon_standing_run_5: 954509651378998105
+      __jet_pack_man_now_weapon_standing_run_6: 7194098970441961423
+      __jet_pack_man_now_weapon_standing_run_7: -1022890280153389519
+      __jet_pack_man_now_weapon_standing_run_8: -7827114236611412823
+      __jet_pack_man_now_weapon_standing_run_9: -9021609749304940376
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,7 +12,7 @@ public class RobotShooting : MonoBehaviour
     void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
-        InvokeRepeating(nameof(Shoot), 0f, 1f);
+        StartShooting();
     }
 
     void Update()
@@ -28,5 +28,13 @@ public class RobotShooting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         audioSource.Stop();
         audioSource.PlayOneShot(shootSound);
+    }
+
+    public void StartShooting()
+    {
+        if (!IsInvoking(nameof(Shoot))) // Kiểm tra nếu chưa bắn thì mới bắt đầu
+        {
+            InvokeRepeating(nameof(Shoot), 0f, 1f);
+        }
     }
 }

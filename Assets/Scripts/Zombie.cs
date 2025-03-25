@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Zombie : MonoBehaviour
 {
-    public float[] zombieSpeed = { 6f, 7f, 8f };
+    public float[] zombieSpeed = { 3, 4, 5 };
     private float speed;
     private Animator animator;
     private bool isDead = false;
@@ -27,12 +27,8 @@ public class Zombie : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Instance.IsBoss || !GameManager.Instance.IsPlaying || isDead)
+        if (!GameManager.Instance.IsPlaying || isDead)
         {
-            if (GameManager.Instance.IsBoss)
-            {
-                DestroyObject();
-            }
             return;
         }
 
@@ -45,7 +41,13 @@ public class Zombie : MonoBehaviour
         if (enemyHealthSlider != null)
         {
             enemyHealthSlider.value = health;
-            Debug.Log(gameObject.name + " health: " + health + ", Slider value: " + enemyHealthSlider.value);
+            Debug.Log(
+                gameObject.name
+                    + " health: "
+                    + health
+                    + ", Slider value: "
+                    + enemyHealthSlider.value
+            );
         }
 
         if (transform.position.x < -30)
@@ -82,7 +84,7 @@ public class Zombie : MonoBehaviour
                 animator.SetBool("IsDead", isDead);
 
                 Invoke(nameof(DestroyObject), 1f);
-
+                GameManager.Instance.AddScore(10);
                 if (Random.value <= 0.3f)
                 {
                     Invoke(nameof(SpawnSupportItem), 1f);
