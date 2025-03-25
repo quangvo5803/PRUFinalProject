@@ -28,11 +28,6 @@ public class Player : MonoBehaviour
     private float boostedSpeedMultiplier = 2f;
 
     private bool isInvulnerable = false;
-
-    // Extra Life
-    private int maxLives = 3;
-    private int currentLives = 1;
-
     private Animator animator;
     public AudioClip flySound;
     private AudioSource audioSource;
