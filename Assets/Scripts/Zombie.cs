@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Zombie : MonoBehaviour
 {
@@ -9,11 +10,14 @@ public class Zombie : MonoBehaviour
     public GameObject[] supportItems;
 
     private int health = 30;
+    public Slider enemyHealthSlider;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         SetSpeed();
+        enemyHealthSlider.maxValue = health;
+        enemyHealthSlider.value = health;
     }
 
     public void SetSpeed()
@@ -38,6 +42,12 @@ public class Zombie : MonoBehaviour
             transform.position.z
         );
 
+        if (enemyHealthSlider != null)
+        {
+            enemyHealthSlider.value = health;
+            Debug.Log(gameObject.name + " health: " + health + ", Slider value: " + enemyHealthSlider.value);
+        }
+
         if (transform.position.x < -30)
         {
             DestroyObject();
@@ -48,22 +58,31 @@ public class Zombie : MonoBehaviour
     {
         if (other.CompareTag("Bullet") || other.CompareTag("RobotBullet"))
         {
-            //Trừ máu tùy vào đạn
-            health -= other.CompareTag("Bullet")
+            int damage = other.CompareTag("Bullet")
                 ? GameManager.Instance.playerDamage
                 : GameManager.Instance.robotDamage;
-            //Hủy viên đạn
+            health -= damage;
+
+            if (enemyHealthSlider != null)
+            {
+                enemyHealthSlider.value = health;
+            }
+
             Destroy(other.gameObject);
 
             if (health <= 0)
             {
+                if (enemyHealthSlider != null)
+                {
+                    enemyHealthSlider.value = 0;
+                }
+
                 GetComponent<Collider2D>().enabled = false;
                 isDead = true;
                 animator.SetBool("IsDead", isDead);
 
                 Invoke(nameof(DestroyObject), 1f);
 
-                // 30% cơ hội xuất hiện SupportItem
                 if (Random.value <= 0.3f)
                 {
                     Invoke(nameof(SpawnSupportItem), 1f);

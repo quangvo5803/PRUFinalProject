@@ -24,10 +24,7 @@ public class Player : MonoBehaviour
     private float speedBoostDuration = 10f;
     private float boostedSpeedMultiplier = 2f;
 
-    // Extra Life
-    private int maxLives = 3;
-    private int currentLives = 1;
-
+    private bool isInvulnerable = false;
 
     private Animator animator;
     public AudioClip flySound;
@@ -73,10 +70,10 @@ public class Player : MonoBehaviour
         {
             if (!isFly)
             {
-                if (!audioSource.isPlaying || audioSource.time > 0.9f) // Ð?m b?o âm thanh không quá dài
+                if (!audioSource.isPlaying || audioSource.time > 0.9f) // ï¿½?m b?o ï¿½m thanh khï¿½ng quï¿½ dï¿½i
                 {
                     audioSource.clip = flySound;
-                    audioSource.time = 0; // Reset th?i gian v? 0 ð? phát t? ð?u
+                    audioSource.time = 0; // Reset th?i gian v? 0 ï¿½? phï¿½t t? ï¿½?u
                     audioSource.Play();
                 }
             }
@@ -116,12 +113,19 @@ public class Player : MonoBehaviour
             audioSource.PlayOneShot(coinSound);
 
         }
-        if (other.gameObject.tag == "Obstacle")
+        if (other.gameObject.CompareTag("Obstacle") && !isInvulnerable)
         {
-            audioSource.PlayOneShot(zombieSound);
-
-            animator.SetBool("IsDead", true);
-            GameManager.Instance.StopGame();
+            HealthManager.health--;
+            if (HealthManager.health <= 0)
+            {
+                animator.SetBool("IsDead", true);
+                audioSource.PlayOneShot(zombieSound);
+                GameManager.Instance.StopGame();
+            }
+            else
+            {
+                StartCoroutine(GetHurt());
+            }
         }
         if (other.CompareTag("Magnet") || other.CompareTag("SpeedBoost") || other.CompareTag("ExtraLife"))
         {
@@ -135,7 +139,7 @@ public class Player : MonoBehaviour
             }
             else if (other.CompareTag("ExtraLife"))
             {
-                IncreaseLife();
+                HealthManager.AddLife();
             }
 
             Destroy(other.gameObject);
@@ -180,18 +184,13 @@ public class Player : MonoBehaviour
         isSpeedBoostActive = false;
     }
 
-
-    void IncreaseLife()
+    IEnumerator GetHurt()
     {
-        if (currentLives < maxLives)
-        {
-            currentLives++;
-            Debug.Log("Extra Life Gained! Lives: " + currentLives);
-        }
-        else
-        {
-            Debug.Log("Already at max lives!");
-        }
+        isInvulnerable = true;
+        GetComponent<Animator>().SetLayerWeight(1, 1);
+        yield return new WaitForSeconds(3f);
+        GetComponent<Animator>().SetLayerWeight(1, 0);
+        isInvulnerable = false;
     }
 
     void UpdateCoin()
