@@ -27,10 +27,7 @@ public class Player : MonoBehaviour
     private float speedBoostDuration = 10f;
     private float boostedSpeedMultiplier = 2f;
 
-    // Extra Life
-    private int maxLives = 3;
-    private int currentLives = 1;
-
+    private bool isInvulnerable = false;
     private Animator animator;
     public AudioClip flySound;
     private AudioSource audioSource;
@@ -125,12 +122,19 @@ public class Player : MonoBehaviour
             GameManager.Instance.UpdateCoin();
             audioSource.PlayOneShot(coinSound);
         }
-        if (other.gameObject.tag == "Obstacle")
+        if (other.gameObject.CompareTag("Obstacle") && !isInvulnerable)
         {
-            audioSource.PlayOneShot(zombieSound);
-
-            animator.SetBool("IsDead", true);
-            GameManager.Instance.StopGame();
+            HealthManager.health--;
+            if (HealthManager.health <= 0)
+            {
+                animator.SetBool("IsDead", true);
+                audioSource.PlayOneShot(zombieSound);
+                GameManager.Instance.StopGame();
+            }
+            else
+            {
+                StartCoroutine(GetHurt());
+            }
         }
         if (
             other.CompareTag("Magnet")
@@ -148,7 +152,7 @@ public class Player : MonoBehaviour
             }
             else if (other.CompareTag("ExtraLife"))
             {
-                IncreaseLife();
+                HealthManager.AddLife();
             }
 
             Destroy(other.gameObject);
@@ -193,17 +197,13 @@ public class Player : MonoBehaviour
         isSpeedBoostActive = false;
     }
 
-    void IncreaseLife()
+    IEnumerator GetHurt()
     {
-        if (currentLives < maxLives)
-        {
-            currentLives++;
-            Debug.Log("Extra Life Gained! Lives: " + currentLives);
-        }
-        else
-        {
-            Debug.Log("Already at max lives!");
-        }
+        isInvulnerable = true;
+        GetComponent<Animator>().SetLayerWeight(1, 1);
+        yield return new WaitForSeconds(3f);
+        GetComponent<Animator>().SetLayerWeight(1, 0);
+        isInvulnerable = false;
     }
 
     void UpdateCoin()
@@ -232,7 +232,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 bulletPostion = new Vector3(
-                -3.4f,
+                -4.4f,
                 transform.position.y - 0.05f,
                 transform.position.z
             );

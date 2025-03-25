@@ -1,0 +1,299 @@
+fileFormatVersion: 2
+guid: 2b193634128971a49922983b564f39a7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3459813966353812023
+    second: __jet_pack_man_now_weapon_flying_die_0
+  - first:
+      213: -5031935992269533562
+    second: __jet_pack_man_now_weapon_flying_die_1
+  - first:
+      213: -4332352338314759938
+    second: __jet_pack_man_now_weapon_flying_die_2
+  - first:
+      213: -549902824438726639
+    second: __jet_pack_man_now_weapon_flying_die_3
+  - first:
+      213: 8745773184562016874
+    second: __jet_pack_man_now_weapon_flying_die_4
+  - first:
+      213: 7080854218951339997
+    second: __jet_pack_man_now_weapon_flying_die_5
+  - first:
+      213: 4189320123803543140
+    second: __jet_pack_man_now_weapon_flying_die_6
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_flying_die_0
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 33
+        width: 309
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a4475b87ab30030800000000000000
+      internalID: 3459813966353812023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_flying_die_1
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 134
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e854810e8fa2ab0800000000000000
+      internalID: -5031935992269533562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_flying_die_2
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 33
+        width: 362
+        height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef07ae8808460e3c0800000000000000
+      internalID: -4332352338314759938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_flying_die_3
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 33
+        width: 365
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11088507b4a5e58f0800000000000000
+      internalID: -549902824438726639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_flying_die_4
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 134
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a62b4ffcf5a3f5970800000000000000
+      internalID: 8745773184562016874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_flying_die_5
+      rect:
+        serializedVersion: 2
+        x: 2369
+        y: 33
+        width: 365
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddfabea656f344260800000000000000
+      internalID: 7080854218951339997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_now_weapon_flying_die_6
+      rect:
+        serializedVersion: 2
+        x: 3061
+        y: 33
+        width: 365
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 466a4b5e474732a30800000000000000
+      internalID: 4189320123803543140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      __jet_pack_man_now_weapon_flying_die_0: 3459813966353812023
+      __jet_pack_man_now_weapon_flying_die_1: -5031935992269533562
+      __jet_pack_man_now_weapon_flying_die_2: -4332352338314759938
+      __jet_pack_man_now_weapon_flying_die_3: -549902824438726639
+      __jet_pack_man_now_weapon_flying_die_4: 8745773184562016874
+      __jet_pack_man_now_weapon_flying_die_5: 7080854218951339997
+      __jet_pack_man_now_weapon_flying_die_6: 4189320123803543140
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

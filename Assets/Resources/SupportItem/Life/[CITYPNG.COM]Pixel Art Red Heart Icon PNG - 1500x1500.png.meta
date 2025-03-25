@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 7cfadef5ce3d22240a49169c1e1f34cb
+guid: f3440bd192482244aab8e0f4e964075f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5491087402541406475
-    second: Screenshot_2025-03-06_124228-removebg-preview_0
-  - first:
-      213: 5542118964273404073
-    second: Screenshot_2025-03-06_124228-removebg-preview_1
-  - first:
-      213: -7426686610147556485
-    second: Screenshot_2025-03-06_124228-removebg-preview_2
+      213: 7675094108364010675
+    second: '[CITYPNG.COM]Pixel Art Red Heart Icon PNG - 1500x1500_0'
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Screenshot_2025-03-06_124228-removebg-preview_0
+      name: '[CITYPNG.COM]Pixel Art Red Heart Icon PNG - 1500x1500_0'
       rect:
         serializedVersion: 2
-        x: 93
-        y: 66
-        width: 192
-        height: 166
+        x: 88
+        y: 128
+        width: 1325
+        height: 1244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b095a1b46e2443c40800000000000000
-      internalID: 5491087402541406475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Screenshot_2025-03-06_124228-removebg-preview_1
-      rect:
-        serializedVersion: 2
-        x: 366
-        y: 66
-        width: 186
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9a8d878a5df89ec40800000000000000
-      internalID: 5542118964273404073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Screenshot_2025-03-06_124228-removebg-preview_2
-      rect:
-        serializedVersion: 2
-        x: 634
-        y: 66
-        width: 194
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b73410850eb1fe890800000000000000
-      internalID: -7426686610147556485
+      spriteID: 3b4faba5d69638a60800000000000000
+      internalID: 7675094108364010675
       vertices: []
       indices: 
       edges: []
