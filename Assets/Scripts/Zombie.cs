@@ -41,13 +41,6 @@ public class Zombie : MonoBehaviour
         if (enemyHealthSlider != null)
         {
             enemyHealthSlider.value = health;
-            Debug.Log(
-                gameObject.name
-                    + " health: "
-                    + health
-                    + ", Slider value: "
-                    + enemyHealthSlider.value
-            );
         }
 
         if (transform.position.x < -30)
