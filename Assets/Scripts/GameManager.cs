@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        totalCoin = PlayerPrefs.GetInt("TotalsCoin", 0);
+        totalCoin = PlayerPrefs.GetInt("TotalsCoin", 500);
         playerLevel = PlayerPrefs.GetInt("PlayerLevel", 1);
         robotLevel = PlayerPrefs.GetInt("RobotLevel", 1);
 
