@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     public Transform spawnPoint; // Vị trí spawn nhân vật trong scene
     private GameObject currentCharacter;
     public GameObject bulletPrefab; // Đạn của nhân vật
-    public GameObject robotPrefab; // Prefab của robot
+    private GameObject robotPrefab; // Prefab của robot
     public AudioClip flySound; // Âm thanh bay
     public AudioClip coinSound; // Âm thanh coin
     public AudioClip zapperSound; // Âm thanh zapper
@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScore()
     {
-        if (currentScore >= 3000)
+        if (currentScore >= PlayerPrefs.GetInt("UnlockedLevel", 1) * 3000)
         {
             IsBoss = true;
             return;
@@ -164,8 +164,11 @@ public class GameManager : MonoBehaviour
     {
         IsPlaying = true;
         IsPause = false;
-        RobotShooting robot = FindObjectsOfType<RobotShooting>().First();
-        robot.StartShooting();
+        if (PlayerPrefs.GetInt("IsRobot", 0) == 1)
+        {
+            RobotShooting robot = FindObjectsOfType<RobotShooting>().First();
+            robot.StartShooting();
+        }
     }
 
     public void StopGame()

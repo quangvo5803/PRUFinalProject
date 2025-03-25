@@ -31,6 +31,7 @@ public class CharacterSelection : MonoBehaviour
 
     void StartGame()
     {
-        SceneManager.LoadScene("Level1"); // T�n scene ch�i game c?a b?n
+        int selectLevel = PlayerPrefs.GetInt("SelectedLevel", 1);
+        SceneManager.LoadScene("Level" + selectLevel); // T�n scene ch�i game c?a b?n
     }
 }
